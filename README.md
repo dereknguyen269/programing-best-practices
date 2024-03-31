@@ -67,6 +67,7 @@ With the list bellow, I hope I can help developers improve their skills and rise
 - **[AWS Best Practices](https://roadmap.sh/best-practices/aws)**
 - **[System Design 101](https://github.com/ByteByteGoHq/system-design-101#system-design-101) - @ByteByteGoHq** 
 - **[AI & Data Science Best Practices](#ai--data-science-best-practices)**
+- **[Best practices using AI tools for developer](best-practices-using-ai-tools-for-developer)**
 
 ## Start Here
 
@@ -452,6 +453,13 @@ Hello! I created this list and am constantly updating it with new resources, inf
 - [xenonstack's blog](https://www.xenonstack.com/blog/ai-best-practices)
 - [Best practices for deep learning in Julia, inspired by fastai](https://github.com/FluxML/FastAI.jl)
 - [ETL best practices with airflow, with examples](https://github.com/gtoonstra/etl-with-airflow)
+
+## Best practices using AI tools for developer
+- [Best Practices for Coding with AI in 2024](https://blog.codacy.com/best-practices-for-coding-with-ai)
+- [AI Tools for Developers: 5 Types of Tools and How to Choose](https://swimm.io/learn/ai-tools-for-developers/ai-tools-for-developers-5-types-of-tools-and-how-to-choose)
+- [The Do’s and Don’ts of Using AI in Software Development](https://www.kodeco.com/41989083-the-do-s-and-don-ts-of-using-ai-in-software-development)
+- [10 best practices for securely developing with AI](https://snyk.io/blog/10-best-practices-for-securely-developing-with-ai/)
+- [Work Smarter, Not Harder: AI Hacks to Maximize Your Productivity in 2024](https://www.smarttrick.org/post/work-smarter-not-harder-ai-hacks-to-maximize-your-productivity-in-2024)
 
 # Contribute
 
