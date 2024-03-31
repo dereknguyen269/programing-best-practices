@@ -67,7 +67,7 @@ With the list bellow, I hope I can help developers improve their skills and rise
 - **[AWS Best Practices](https://roadmap.sh/best-practices/aws)**
 - **[System Design 101](https://github.com/ByteByteGoHq/system-design-101#system-design-101) - @ByteByteGoHq** 
 - **[AI & Data Science Best Practices](#ai--data-science-best-practices)**
-- **[Best practices using AI tools for developer](best-practices-using-ai-tools-for-developer)**
+- **[Best practices using AI tools for developer](#best-practices-using-ai-tools-for-developer)**
 
 ## Start Here
 
