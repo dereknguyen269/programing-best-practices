@@ -58,6 +58,10 @@ With the list bellow, I hope I can help developers improve their skills and rise
 - **[MySQL Best Practices](#mysql-best-practices)**
 - **[NoSQL Best Practices](#nosql-best-practices)**
 
+### Tools
+
+- **[AI Tools Best Practices](#ai-tools-best-practices)**
+
 ### Other
 - **[Swift Best Practices](#swift-best-practices)**
 - **[Flutter best practices](#flutter-best-practices)**
@@ -74,6 +78,11 @@ With the list bellow, I hope I can help developers improve their skills and rise
 Hello! I created this list and am constantly updating it with new resources, information, and news. If you want to stay updated on the newest trends, tutorials, and articles in the Web Development world, please feel free to submit a PR!
 
 ---
+
+## AI Tools Best Practices
+
+-    [9 of the Best AI Tools for Software Developers in 2024](https://www.stepsize.com/blog/best-ai-tools-for-software-developers)
+-    [The best AI tools for developers in 2024](https://daily.dev/blog/the-best-ai-tools-for-developers-in-2024)
 
 ## HTML Best Practices
 
