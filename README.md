@@ -209,6 +209,10 @@ Hello! I created this list and am constantly updating it with new resources, inf
 
 -   [DESIGN PATTERNS in RUBY](https://refactoring.guru/design-patterns/ruby) - refactoring.guru
 
+-   [Best Practices for Writing Ruby](https://reintech.io/blog/best-practices-for-writing-ruby)
+
+-   [6 Ruby Best Practices Beginners Should Kno](https://www.codementor.io/ruby-on-rails/tutorial/6-ruby-best-practices-beginners-should-know)
+
 ---
 
 ## Rails Best Practices
