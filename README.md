@@ -83,6 +83,8 @@ Hello! I created this list and am constantly updating it with new resources, inf
 
 -    [9 of the Best AI Tools for Software Developers in 2024](https://www.stepsize.com/blog/best-ai-tools-for-software-developers)
 -    [The best AI tools for developers in 2024](https://daily.dev/blog/the-best-ai-tools-for-developers-in-2024)
+-    [Awesome AI Tools](https://github.com/mahseema/awesome-ai-tools) - @mahseema
+-    [Awesome AI-Powered Developer Tools](https://github.com/jamesmurdza/awesome-ai-devtools) - @jamesmurdza
 
 ## HTML Best Practices
 
