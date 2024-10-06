@@ -20,6 +20,7 @@ With the list bellow, I hope I can help developers improve their skills and rise
 
 - **[C best practices](#c-best-practices)**
 - **[C++ best practices](#c-plus-plus-best-practices)**
+- **[C Sharp best practices](#c-sharp-best-practices)**
 - **[Elixir Best Practices](#elixir-best-practices)**
 - **[GO Best Practices](#go-best-practices)**
 - **[Java Best Practices](#java-best-practices)**
@@ -415,6 +416,9 @@ Hello! I created this list and am constantly updating it with new resources, inf
 -   [Modern C++ best practices for exceptions and error handling](https://docs.microsoft.com/en-us/cpp/cpp/errors-and-exception-handling-modern-cpp?view=vs-2019) - microsoft
 -   [Top Ten Tips for Correct C++ Coding](https://www.informit.com/articles/article.aspx?p=1712962)
 
+## C Sharp best practices
+-  [C# Coding Best Practices – Coding Conventions with Examples](https://www.freecodecamp.org/news/coding-best-practices-in-c-sharp/)
+-  [22 C# Best Practices](https://code-maze.com/csharp-22-best-practices/)
 
 ## R best practices
 
