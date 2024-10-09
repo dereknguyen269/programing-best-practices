@@ -64,6 +64,7 @@ With the list bellow, I hope I can help developers improve their skills and rise
 - **[AI Tools Best Practices](#ai-tools-best-practices)**
 
 ### Other
+- **[Bash Script Best Practices](#bash-script-best-practices)**
 - **[Swift Best Practices](#swift-best-practices)**
 - **[Flutter best practices](#flutter-best-practices)**
 - **[Kotlin Best Practices](#kotlin-best-practices)**
@@ -86,6 +87,13 @@ Hello! I created this list and am constantly updating it with new resources, inf
 -    [The best AI tools for developers in 2024](https://daily.dev/blog/the-best-ai-tools-for-developers-in-2024)
 -    [Awesome AI Tools](https://github.com/mahseema/awesome-ai-tools) - @mahseema
 -    [Awesome AI-Powered Developer Tools](https://github.com/jamesmurdza/awesome-ai-devtools) - @jamesmurdza
+
+## Bash Script Best Practices
+
+-    [Bash best practices](https://bertvv.github.io/cheat-sheets/Bash.html)
+-    [progrium/bashstyle](https://github.com/progrium/bashstyle)
+-    [Best practices for bash scripts](https://hyperskill.org/learn/step/19230)
+-    [Best practices for writing Bash scripts](https://expeditor.chef.io/docs/patterns/bash-scripts/)
 
 ## HTML Best Practices
 
