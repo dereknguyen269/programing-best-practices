@@ -68,6 +68,7 @@ With the list bellow, I hope I can help developers improve their skills and rise
 - **[Swift Best Practices](#swift-best-practices)**
 - **[Flutter best practices](#flutter-best-practices)**
 - **[Kotlin Best Practices](#kotlin-best-practices)**
+- **[Dart & Flutter best practices](#dart-n-flutter-best-practices)**
 - **[R best practices](#r-best-practices)**
 - **[Code Review Best Practices](https://roadmap.sh/best-practices/code-review)**
 - **[AWS Best Practices](https://roadmap.sh/best-practices/aws)**
@@ -302,6 +303,12 @@ Hello! I created this list and am constantly updating it with new resources, inf
 -   [kotlin-style-guide](https://github.com/yole/kotlin-style-guide) - @yole
 
 -   [raywenderlich.com Kotlin Style Guide (in progress)](https://github.com/raywenderlich/kotlin-style-guide) - @raywenderlich
+
+## Dart & Flutter best practices
+
+-  [Dart & Flutter best practices](https://lazebny.io/flutter-best-practices/)
+-  [Performance best practices](https://docs.flutter.dev/perf/best-practices)
+-  [Writing Clean Code in Dart: Best Practices and Design Patterns](https://clouddevs.com/dart/clean-code/)
 
 ---
 
