@@ -36,6 +36,7 @@ With the list bellow, I hope I can help developers improve their skills and rise
 - **[Rails Best Practices](#rails-best-practices)**
 - **[Rust Best Practices](#rust-best-practices)**
 - **[API Security Best Practices](#api-security-best-practices)**
+- **[NestJS Practices](#nestJS-bractices)**
 
 ### Frontend
 
@@ -475,6 +476,10 @@ Hello! I created this list and am constantly updating it with new resources, inf
 ## Nuxt Best Practices
 
 - [10 Nuxt Best Practices](https://climbtheladder.com/10-nuxt-best-practices/)
+
+## NestJS Practices
+
+- [Best NestJS Practices and Advanced Techniques](https://dev.to/drbenzene/best-nestjs-practices-and-advanced-techniques-9m0)
 
 ## API Security Best Practices
 
