@@ -26,79 +26,115 @@ With this collection, I hope to support developers in writing **cleaner, more ma
 
 ## 📂 Table of Contents
 
-### 🔹 Backend
+### 🔹 Backend Development
 
+#### Systems Programming
 * [C](#c-best-practices)
-* [C++](#c-plus-plus-best-practices)
-* [C#](#c-sharp-best-practices)
-* [Elixir](#elixir-best-practices)
-* [Go](#go-best-practices)
+* [C++](#c-best-practices-1)
+* [Rust](#rust-best-practices)
+
+#### Enterprise & JVM Languages
 * [Java](#java-best-practices)
 * [Kotlin](#kotlin-best-practices)
-* [Laravel](#laravel-best-practices)
-* [Lua](#lua-best-practices)
+* [Scala](#scala-best-practices)
+* [C#](#c-best-practices-2)
+
+#### Web Backend
 * [Node.js](#nodejs-best-practices)
-* [Objective-C](#objective-c-best-practices)
-* [Perl](#perl-best-practices)
-* [PHP](#php-best-practices)
 * [Python](#python-best-practices)
 * [Ruby](#ruby-best-practices)
 * [Rails](#rails-best-practices)
-* [Rust](#rust-best-practices)
-* [Scala](#scala-best-practices)
-* [Swift](#swift-best-practices)
+* [PHP](#php-best-practices)
+* [Laravel](#laravel-best-practices)
 * [NestJS](#nestjs-best-practices)
-* [API Security](#api-security-best-practices)
 
-### 🔹 Frontend
+#### Functional & Specialized
+* [Elixir](#elixir-best-practices)
+* [Go](#go-golang-best-practices)
+* [Swift](#swift-best-practices)
+* [Objective-C](#objective-c-best-practices)
+* [Perl](#perl-best-practices)
+* [Lua](#lua-best-practices)
 
-* [Angular](#angular-best-practices)
-* [CSS](#css-best-practices)
+### 🔹 Frontend Development
+
+#### Core Technologies
 * [HTML](#html-best-practices)
-* [JavaScript](#javascript-best-practices)
+* [CSS](#css-best-practices)
 * [SASS](#sass-best-practices)
-* [React](#reactjs-best-practices)
-* [React Native](#reactnative-best-practices)
+* [JavaScript](#javascript-best-practices)
 * [TypeScript](#typescript-best-practices)
+
+#### Frameworks & Libraries
+* [React](#reactjs-best-practices)
+* [React Native](#react-native-best-practices)
 * [Vue](#vue-best-practices)
+* [Angular](#angular-best-practices)
 * [Next.js](#nextjs-best-practices)
 * [Nuxt](#nuxt-best-practices)
-* [Frontend Performance](https://roadmap.sh/best-practices/frontend-performance)
 
-### 🔹 Database
+#### Performance
+* [Frontend Performance](#frontend-performance-best-practices)
 
+### 🔹 Database & Data
+
+#### SQL Databases
 * [SQL](#sql-best-practices)
 * [PostgreSQL](#postgresql-best-practices)
 * [MySQL](#mysql-best-practices)
+
+#### NoSQL & Big Data
 * [NoSQL](#nosql-best-practices)
 
-### 🔹 Tools
+### 🔹 Mobile Development
+* [Flutter](#flutter-best-practices)
+* [Dart](#dart-best-practices)
+* [React Native](#react-native-best-practices)
 
-* [AI Tools](#ai-tools-best-practices)
+### 🔹 DevOps & Infrastructure
+
+#### Cloud & Deployment
+* [AWS](#aws-best-practices)
+* [Microservices & Cloud-Native](#microservices--cloud-native-best-practices)
+
+#### Security
+* [API Security](#api-security-best-practices)
+* [DevSecOps](#devsecops--security-best-practices)
+
+### 🔹 AI & Data Science
+* [AI/ML Engineering](#aiml-engineering-best-practices)
+* [AI Tools for Developers](#ai-tools-for-developers)
+
+### 🔹 Development Tools & Practices
+
+#### Version Control & Collaboration
+* [Code Review](#code-review-best-practices)
+* [Team Collaboration](#team--collaboration-best-practices)
+
+#### Scripting & Automation
 * [Bash](#bash-script-best-practices)
 
-### 🔹 Other
+#### Performance & Architecture
+* [System Design](#system-design-best-practices)
+* [Performance & Scalability](#performance--scalability-best-practices)
 
-* [Flutter](#flutter-best-practices)
-* [Dart & Flutter](#dart--flutter-best-practices)
+### 🔹 Specialized Languages
 * [R](#r-best-practices)
-* [System Design](https://github.com/ByteByteGoHq/system-design-101#system-design-101)
-* [Code Review](https://roadmap.sh/best-practices/code-review)
-* [AWS](https://roadmap.sh/best-practices/aws)
-* [AI & Data Science](#ai--data-science-best-practices)
-* [AI Tools for Developers](#best-practices-using-ai-tools-for-developer)
 
 ---
-# 🔹 Backend Best Practices
 
-## 🖥️ C Best Practices
+# 🔹 Backend Development
+
+## Systems Programming
+
+### 🖥️ C Best Practices
 
 * [C Programming Best Practices – Must know to become an Expert](https://data-flair.training/blogs/c-programming-best-practices/)
 * [c-style](https://github.com/mcinglis/c-style) — *@mcinglis*
 
 ---
 
-## 🖥️ C++ Best Practices
+### 🖥️ C++ Best Practices
 
 * [3 Coding Best Practices for C++](https://www.perforce.com/blog/qac/3-coding-best-practices-cpp)
 * [Collaborative Collection of C++ Best Practices](https://github.com/lefticus/cppbestpractices) — *@lefticus*
@@ -110,39 +146,17 @@ With this collection, I hope to support developers in writing **cleaner, more ma
 
 ---
 
-## 🖥️ C# Best Practices
+### 🦀 Rust Best Practices
 
-* [C# Coding Best Practices – Conventions with Examples](https://www.freecodecamp.org/news/coding-best-practices-in-c-sharp/)
-* [22 C# Best Practices](https://code-maze.com/csharp-22-best-practices/)
-
----
-
-## 🧪 Elixir Best Practices
-
-* [The Elixir Style Guide](https://github.com/christopheradams/elixir_style_guide) — *@christopheradams*
-* [Elixir Style Guide](https://github.com/lexmag/elixir-style-guide) — *@lexmag*
-* [Credo’s Elixir Style Guide](https://github.com/rrrene/elixir-style-guide) — *@rrrene*
-* [10 Killer Elixir Tips #1](https://medium.com/blackode/10-killer-elixir-tips-2a9be1bec9be)
-* [10 Killer Elixir Tips #2](https://medium.com/blackode/10-killer-elixir-tips-2-c5f87f8a70c8)
-* [10 Killer Elixir Tips #3](https://medium.com/blackode/10-killer-elixir-tips-3-5c196eaec376)
-* [Elixir Cheatsheet](https://devhints.io/elixir)
-* [Elixir Metaprogramming Cheatsheet](https://devhints.io/elixir-metaprogramming)
+* [Rust Style Guide](https://github.com/ubsan/style/blob/master/guide.md) — *@ubsan*
+* [Rust Design Patterns](https://rust-unofficial.github.io/patterns/)
+* [Design Patterns in Rust](https://refactoring.guru/design-patterns/rust) — *Refactoring.Guru*
 
 ---
 
-## 🐹 Go (Golang) Best Practices
+## Enterprise & JVM Languages
 
-* [Uber Go Style Guide](https://github.com/uber-go/guide/blob/master/style.md) — *@uber-go*
-* [Go Best Practices](https://github.com/mehrdadrad/GoBestPractices) — *@mehrdadrad*
-* [Go Style Guide](https://github.com/AgtLucas/go-style-guide) — *@AgtLucas*
-* [Golang Tutorial Series](https://golangbot.com/learn-golang-series/)
-* [Golang Cheat Sheet (Golang Dojo)](https://products.golangdojo.com/golang-cheat-sheet-by-golang-dojo)
-* [Soham Kamani – Golang](https://www.sohamkamani.com/golang/)
-* [Design Patterns in Go](https://refactoring.guru/design-patterns/go) — *Refactoring.Guru*
-
----
-
-## ☕ Java Best Practices
+### ☕ Java Best Practices
 
 * [Java Best Practices](https://github.com/in28minutes/java-best-practices) — *@in28minutes*
 * [Selenium Best Practices](https://github.com/previousdeveloper/Selenium-best-practices) — *@previousdeveloper*
@@ -152,7 +166,7 @@ With this collection, I hope to support developers in writing **cleaner, more ma
 
 ---
 
-## 🌀 Kotlin Best Practices
+### 🌀 Kotlin Best Practices
 
 * [Best Practices in Kotlin](https://github.com/JackyAndroid/kotlin-best-practices) — *@JackyAndroid*
 * [Kotlin Style Guide](https://github.com/yole/kotlin-style-guide) — *@yole*
@@ -160,52 +174,30 @@ With this collection, I hope to support developers in writing **cleaner, more ma
 
 ---
 
-## 🎯 Laravel Best Practices
+### 🌀 Scala Best Practices
 
-* [Laravel: The Right Way](https://github.com/laraveltherightway/laraveltherightway.github.io) — *@laraveltherightway*
-* [Laravel Best Practices](https://github.com/uonick/laravel-best-practices) — *@uonick*
-
----
-
-## 🪶 Lua Best Practices
-
-* [Lua Best Practices (Lua.org)](https://www.lua.org/gems/sample.pdf)
-* [Lua Style Guide](http://lua-users.org/wiki/LuaStyleGuide)
+* [Scala Best Practices](https://github.com/alexandru/scala-best-practices) — *@alexandru*
+* [Databricks Scala Guide](https://github.com/databricks/scala-style-guide) — *@databricks*
 
 ---
 
-## 🟢 Node.js Best Practices
+### 🖥️ C# Best Practices
+
+* [C# Coding Best Practices – Conventions with Examples](https://www.freecodecamp.org/news/coding-best-practices-in-c-sharp/)
+* [22 C# Best Practices](https://code-maze.com/csharp-22-best-practices/)
+
+---
+
+## Web Backend
+
+### 🟢 Node.js Best Practices
 
 * [Node.js Style Guide](https://github.com/felixge/node-style-guide) — *@felixge*
 * [RisingStack Node.js Style Guide](https://github.com/RisingStack/node-style-guide) — *@RisingStack*
 
 ---
 
-## 🍏 Objective-C Best Practices
-
-* [NYTimes Objective-C Style Guide](https://github.com/NYTimes/objective-c-style-guide) — *@NYTimes*
-* [Objective-C Style Guide (Ray Wenderlich)](https://github.com/raywenderlich/objective-c-style-guide) — *@raywenderlich*
-* [GitHub Objective-C Style Guide](https://github.com/github/objective-c-style-guide) — *@github*
-* [Code Style & Best Practices for Objective-C](https://github.com/wangshengjia/-Code-Style---Best-Practise-for-Objective-C) — *@wangshengjia*
-
----
-
-## 🐪 Perl Best Practices
-
-* [Effective Perl Programming: Idiomatic Perl](https://www.effectiveperlprogramming.com/)
-* [Perl Style Guide](https://perldoc.perl.org/perlstyle) — *Perl.org*
-
----
-
-## 🐘 PHP Best Practices
-
-* [PHP: The Right Way](https://github.com/codeguy/php-the-right-way) — *@codeguy*
-* [PHP Knowledge](https://github.com/php-earth/php-knowledge) — *@php-earth*
-* [PHP Coding Standards](https://github.com/maxdmyers/php-style-guide) — *@maxdmyers*
-
----
-
-## 🐍 Python Best Practices
+### 🐍 Python Best Practices
 
 * [Python Best Practices – Become an Expert](https://data-flair.training/blogs/python-best-practices/)
 * [Best of the Best Practices (BOBP) Guide](https://gist.github.com/sloria/7001839) — *@sloria*
@@ -217,7 +209,7 @@ With this collection, I hope to support developers in writing **cleaner, more ma
 
 ---
 
-## 💎 Ruby Best Practices
+### 💎 Ruby Best Practices
 
 * [Ruby Style Guide](https://github.com/airbnb/ruby) — *@airbnb*
 * [Ruby Tricks & Best Practices](https://github.com/franzejr/best-ruby) — *@franzejr*
@@ -225,7 +217,6 @@ With this collection, I hope to support developers in writing **cleaner, more ma
 * [Ruby Best Practices (Gregory Brown)](https://github.com/practicingruby/rbp-book) — *@practicingruby*
 * [The Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide) — *@bbatsov*
 * [Shopify Ruby Style Guide](https://github.com/Shopify/ruby-style-guide) — *@Shopify*
-* [Airbnb Ruby Style Guide](https://github.com/airbnb/ruby) — *@airbnb*
 * [53 Ruby on Rails Interview Questions](https://medium.com/ruby-daily/53-ruby-on-rails-interview-questions-and-answers-eb99eed1aeb7)
 * [Ruby Best Practices (Toptal)](https://www.toptal.com/ruby/tips-and-practices)
 * [Ruby Best Practices for Beginners](https://deepsource.io/blog/ruby-dev-best-practices-for-beginners/)
@@ -236,16 +227,15 @@ With this collection, I hope to support developers in writing **cleaner, more ma
 
 ---
 
-## 🚂 Rails Best Practices
+### 🚂 Rails Best Practices
 
 * [Rails Style Guide](https://github.com/bbatsov/rails-style-guide) — *@bbatsov*
-* [rails\_best\_practices](https://github.com/flyerhzm/rails_best_practices) — *@flyerhzm*
+* [rails_best_practices](https://github.com/flyerhzm/rails_best_practices) — *@flyerhzm*
 * [RSpec Style Guide](https://github.com/reachlocal/rspec-style-guide) — *@reachlocal*
 * [RSpec Best Practices](https://github.com/abinoda/rspec-best-practices) — *@abinoda*
 * [Rails Database Best Practices](https://blog.carbonfive.com/rails-database-best-practices/)
 * [Active Record Query Optimization Tips](https://medium.com/@User3141592/active-record-query-performance-tips-a3c3947b968)
 * [ActiveRecord SQL Query Optimization](https://phrase.com/blog/posts/activerecord-speed-up-your-sql-queries/)
-* [53 Ruby on Rails Interview Questions](https://medium.com/ruby-daily/53-ruby-on-rails-interview-questions-and-answers-eb99eed1aeb7)
 * [Arel Cheatsheet](https://devhints.io/arel)
 * [Production Rails](https://github.com/ankane/production_rails) — *@ankane*
 * [Securing Sensitive Data in Rails](https://ankane.org/sensitive-data-rails) — *@ankane*
@@ -253,22 +243,55 @@ With this collection, I hope to support developers in writing **cleaner, more ma
 
 ---
 
-## 🦀 Rust Best Practices
+### 🐘 PHP Best Practices
 
-* [Rust Style Guide](https://github.com/ubsan/style/blob/master/guide.md) — *@ubsan*
-* [Rust Design Patterns](https://rust-unofficial.github.io/patterns/)
-* [Design Patterns in Rust](https://refactoring.guru/design-patterns/rust) — *Refactoring.Guru*
-
----
-
-## 🌀 Scala Best Practices
-
-* [Scala Best Practices](https://github.com/alexandru/scala-best-practices) — *@alexandru*
-* [Databricks Scala Guide](https://github.com/databricks/scala-style-guide) — *@databricks*
+* [PHP: The Right Way](https://github.com/codeguy/php-the-right-way) — *@codeguy*
+* [PHP Knowledge](https://github.com/php-earth/php-knowledge) — *@php-earth*
+* [PHP Coding Standards](https://github.com/maxdmyers/php-style-guide) — *@maxdmyers*
 
 ---
 
-## 🍎 Swift Best Practices
+### 🎯 Laravel Best Practices
+
+* [Laravel: The Right Way](https://github.com/laraveltherightway/laraveltherightway.github.io) — *@laraveltherightway*
+* [Laravel Best Practices](https://github.com/uonick/laravel-best-practices) — *@uonick*
+
+---
+
+### 🟣 NestJS Best Practices
+
+* [Best NestJS Practices and Advanced Techniques](https://dev.to/drbenzene/best-nestjs-practices-and-advanced-techniques-9m0)
+
+---
+
+## Functional & Specialized
+
+### 🧪 Elixir Best Practices
+
+* [The Elixir Style Guide](https://github.com/christopheradams/elixir_style_guide) — *@christopheradams*
+* [Elixir Style Guide](https://github.com/lexmag/elixir-style-guide) — *@lexmag*
+* [Credo's Elixir Style Guide](https://github.com/rrrene/elixir-style-guide) — *@rrrene*
+* [10 Killer Elixir Tips #1](https://medium.com/blackode/10-killer-elixir-tips-2a9be1bec9be)
+* [10 Killer Elixir Tips #2](https://medium.com/blackode/10-killer-elixir-tips-2-c5f87f8a70c8)
+* [10 Killer Elixir Tips #3](https://medium.com/blackode/10-killer-elixir-tips-3-5c196eaec376)
+* [Elixir Cheatsheet](https://devhints.io/elixir)
+* [Elixir Metaprogramming Cheatsheet](https://devhints.io/elixir-metaprogramming)
+
+---
+
+### 🐹 Go (Golang) Best Practices
+
+* [Uber Go Style Guide](https://github.com/uber-go/guide/blob/master/style.md) — *@uber-go*
+* [Go Best Practices](https://github.com/mehrdadrad/GoBestPractices) — *@mehrdadrad*
+* [Go Style Guide](https://github.com/AgtLucas/go-style-guide) — *@AgtLucas*
+* [Golang Tutorial Series](https://golangbot.com/learn-golang-series/)
+* [Golang Cheat Sheet (Golang Dojo)](https://products.golangdojo.com/golang-cheat-sheet-by-golang-dojo)
+* [Soham Kamani – Golang](https://www.sohamkamani.com/golang/)
+* [Design Patterns in Go](https://refactoring.guru/design-patterns/go) — *Refactoring.Guru*
+
+---
+
+### 🍎 Swift Best Practices
 
 * [Swift Style Guide (Eure)](https://github.com/eure/swift-style-guide) — *@eure*
 * [Design Patterns in Swift](https://github.com/ochococo/Design-Patterns-In-Swift) — *@ochococo*
@@ -276,39 +299,34 @@ With this collection, I hope to support developers in writing **cleaner, more ma
 
 ---
 
-## 🟣 NestJS Best Practices
+### 🍏 Objective-C Best Practices
 
-* [Best NestJS Practices and Advanced Techniques](https://dev.to/drbenzene/best-nestjs-practices-and-advanced-techniques-9m0)
-
----
-
-## 🔐 API Security Best Practices
-
-* [API Security Best Practices (Roadmap.sh)](https://roadmap.sh/best-practices/api-security)
-* [API Security Checklist](https://github.com/shieldfy/API-Security-Checklist)
+* [NYTimes Objective-C Style Guide](https://github.com/NYTimes/objective-c-style-guide) — *@NYTimes*
+* [Objective-C Style Guide (Ray Wenderlich)](https://github.com/raywenderlich/objective-c-style-guide) — *@raywenderlich*
+* [GitHub Objective-C Style Guide](https://github.com/github/objective-c-style-guide) — *@github*
+* [Code Style & Best Practices for Objective-C](https://github.com/wangshengjia/-Code-Style---Best-Practise-for-Objective-C) — *@wangshengjia*
 
 ---
 
-# 🎨 Frontend Best Practices
+### 🐪 Perl Best Practices
 
-## 🅰️ Angular Best Practices
-
-* [AngularJS Style Guide](https://github.com/mgechev/angularjs-style-guide) — *@mgechev*
-* [Angular 2 Style Guide](https://github.com/mgechev/angular2-style-guide) — *@mgechev*
-* [Angular.js Advanced Design Patterns](https://github.com/trochette/Angular-Design-Patterns-Best-Practices) — *@trochette*
+* [Effective Perl Programming: Idiomatic Perl](https://www.effectiveperlprogramming.com/)
+* [Perl Style Guide](https://perldoc.perl.org/perlstyle) — *Perl.org*
 
 ---
 
-## 🎨 CSS Best Practices
+### 🪶 Lua Best Practices
 
-* [Airbnb CSS / Sass Styleguide](https://github.com/airbnb/css) — *@airbnb*
-* [Dropbox (S)CSS Style Guide](https://github.com/dropbox/css-style-guide) — *@dropbox*
-* [CSS Coding Standards & Best Practices](https://github.com/stevekwan/best-practices/blob/master/css/best-practices.md) — *@stevekwan*
-* [Google CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html#CSS) — *@google*
+* [Lua Best Practices (Lua.org)](https://www.lua.org/gems/sample.pdf)
+* [Lua Style Guide](http://lua-users.org/wiki/LuaStyleGuide)
 
 ---
 
-## 🌐 HTML Best Practices
+# 🎨 Frontend Development
+
+## Core Technologies
+
+### 🌐 HTML Best Practices
 
 * [HTML Best Practices](https://github.com/hail2u/html-best-practices) — *@hail2u*
 * [HTML5 (and Some CSS) Best Practice](https://www.codeproject.com/Tips/666578/HTML-and-Some-CSS-Best-Practice)
@@ -317,11 +335,28 @@ With this collection, I hope to support developers in writing **cleaner, more ma
 
 ---
 
-## 📜 JavaScript Best Practices
+### 🎨 CSS Best Practices
+
+* [Airbnb CSS / Sass Styleguide](https://github.com/airbnb/css) — *@airbnb*
+* [Dropbox (S)CSS Style Guide](https://github.com/dropbox/css-style-guide) — *@dropbox*
+* [CSS Coding Standards & Best Practices](https://github.com/stevekwan/best-practices/blob/master/css/best-practices.md) — *@stevekwan*
+* [Google CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html#CSS) — *@google*
+
+---
+
+### 🎨 SASS Best Practices
+
+* [Sass Coding Guidelines](https://github.com/bigcommerce/sass-style-guide) — *@bigcommerce*
+* [Sass-Guidelines](https://github.com/blackfalcon/Sass-Guidlines/blob/master/SASS-Guidelines.md) — *@blackfalcon*
+* [Sass-lang Style Rules](https://sass-lang.com/documentation/style-rules)
+
+---
+
+### 📜 JavaScript Best Practices
 
 * [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) — *@airbnb*
 * [ES6 Cheatsheet](https://github.com/DrkSephy/es6-cheatsheet) — *@DrkSephy*
-* [Common JavaScript “Gotchas”](https://github.com/stevekwan/best-practices/blob/master/javascript/gotchas.md) — *@stevekwan*
+* [Common JavaScript "Gotchas"](https://github.com/stevekwan/best-practices/blob/master/javascript/gotchas.md) — *@stevekwan*
 * [Pragmatic JavaScript Standards](https://github.com/stevekwan/best-practices/blob/master/javascript/best-practices.md) — *@stevekwan*
 * [JavaScript 规范](https://github.com/adamlu/javascript-style-guide) — *@adamlu*
 * [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html) — *@google*
@@ -332,34 +367,28 @@ With this collection, I hope to support developers in writing **cleaner, more ma
 
 ---
 
-## 🎨 SASS Best Practices
+### 🟦 TypeScript Best Practices
 
-* [Sass Coding Guidelines](https://github.com/bigcommerce/sass-style-guide) — *@bigcommerce*
-* [Sass-Guidelines](https://github.com/blackfalcon/Sass-Guidlines/blob/master/SASS-Guidelines.md) — *@blackfalcon*
-* [Sass-lang Style Rules](https://sass-lang.com/documentation/style-rules)
+* [TypeScript Best Practices](https://github.com/BestCoderDotInfo/TypeScript-best-practices) — *@BestCoderDotInfo*
 
 ---
 
-## ⚛️ ReactJS Best Practices
+## Frameworks & Libraries
+
+### ⚛️ ReactJS Best Practices
 
 * [Advanced ReactJS Patterns](https://github.com/kentcdodds/advanced-react-patterns-v2) — *@kentcdodds*
 * [React Interview Questions & Answers](https://github.com/sudheerj/reactjs-interview-questions) — *@sudheerj*
 
 ---
 
-## 📱 React Native Best Practices
+### 📱 React Native Best Practices
 
 * [React Native Guide](https://github.com/reactnativecn/react-native-guide) — *@reactnativecn*
 
 ---
 
-## 🟦 TypeScript Best Practices
-
-* [TypeScript Best Practices](https://github.com/BestCoderDotInfo/TypeScript-best-practices) — *@BestCoderDotInfo*
-
----
-
-## 🖼️ Vue Best Practices
+### 🖼️ Vue Best Practices
 
 * [Tips & Best Practices (Vue 0.12)](https://012.vuejs.org/guide/best-practices.html)
 * [10 Good Practices for Large Vue.js Projects](https://www.telerik.com/blogs/10-good-practices-building-maintaining-large-vuejs-projects)
@@ -367,7 +396,15 @@ With this collection, I hope to support developers in writing **cleaner, more ma
 
 ---
 
-## ⚡ Next.js Best Practices
+### 🅰️ Angular Best Practices
+
+* [AngularJS Style Guide](https://github.com/mgechev/angularjs-style-guide) — *@mgechev*
+* [Angular 2 Style Guide](https://github.com/mgechev/angular2-style-guide) — *@mgechev*
+* [Angular.js Advanced Design Patterns](https://github.com/trochette/Angular-Design-Patterns-Best-Practices) — *@trochette*
+
+---
+
+### ⚡ Next.js Best Practices
 
 * [Best Practices for Clean React/Next.js Projects](https://blogs.perficient.com/2023/04/25/best-practices-for-building-and-sustaining-a-clean-react-next-js-project/)
 * [10 Tips for Optimal Next.js Performance](https://www.fronttribe.com/stories/next-js-best-practices-10-tips-for-optimal-performance)
@@ -375,21 +412,27 @@ With this collection, I hope to support developers in writing **cleaner, more ma
 
 ---
 
-## ⚡ Nuxt Best Practices
+### ⚡ Nuxt Best Practices
 
 * [10 Nuxt Best Practices](https://climbtheladder.com/10-nuxt-best-practices/)
 
 ---
 
-## 🚀 Frontend Performance
+## Performance
+
+### 🚀 Frontend Performance Best Practices
 
 * [Frontend Performance Best Practices (Roadmap.sh)](https://roadmap.sh/best-practices/frontend-performance)
+* [Web Vitals Best Practices (Google)](https://web.dev/vitals/)
+* [High Performance Web Apps (MDN)](https://developer.mozilla.org/en-US/docs/Learn/Performance)
 
 ---
 
-# 🗄️ Database Best Practices
+# 🗄️ Database & Data
 
-## 📊 SQL Best Practices
+## SQL Databases
+
+### 📊 SQL Best Practices
 
 * [SQL Style Guide](https://www.sqlstyle.guide)
 * [Best Practices for Writing SQL Queries](https://www.metabase.com/learn/sql-questions/sql-best-practices)
@@ -398,7 +441,7 @@ With this collection, I hope to support developers in writing **cleaner, more ma
 
 ---
 
-## 🐘 PostgreSQL Best Practices
+### 🐘 PostgreSQL Best Practices
 
 * [PostgreSQL Performance Best Practices](https://www.adservio.fr/post/postgresql-performance-best-practices)
 * [Best Practices for PostgreSQL Database](https://www.e2enetworks.com/blog/best-practices-for-postgresql-database)
@@ -407,13 +450,16 @@ With this collection, I hope to support developers in writing **cleaner, more ma
 
 ---
 
-## 🐬 MySQL Best Practices
+### 🐬 MySQL Best Practices
 
-* *(You may want to expand with curated resources, as your draft had no MySQL links yet.)*
+* [MySQL Performance Best Practices](https://dev.mysql.com/doc/refman/8.0/en/optimization.html)
+* [MySQL Security Best Practices](https://dev.mysql.com/doc/refman/8.0/en/security-guidelines.html)
 
 ---
 
-## 📦 NoSQL Best Practices
+## NoSQL & Big Data
+
+### 📦 NoSQL Best Practices
 
 * [10 NoSQL Data Modeling Best Practices](https://climbtheladder.com/10-nosql-data-modeling-best-practices/)
 * [MongoDB Schema Design Best Practices](https://www.mongodb.com/developer/products/mongodb/mongodb-schema-design-best-practices/)
@@ -421,31 +467,7 @@ With this collection, I hope to support developers in writing **cleaner, more ma
 
 ---
 
-# 🛠️ Tools Best Practices
-
-## 🤖 AI Tools Best Practices
-
-* [9 of the Best AI Tools for Software Developers in 2024](https://www.stepsize.com/blog/best-ai-tools-for-software-developers)
-* [The Best AI Tools for Developers in 2024](https://daily.dev/blog/the-best-ai-tools-for-developers-in-2024)
-* [Awesome AI Tools](https://github.com/mahseema/awesome-ai-tools) — *@mahseema*
-* [Awesome AI-Powered Developer Tools](https://github.com/jamesmurdza/awesome-ai-devtools) — *@jamesmurdza*
-
----
-
-## 🐚 Bash Script Best Practices
-
-* [Bash Best Practices](https://bertvv.github.io/cheat-sheets/Bash.html)
-* [progrium/bashstyle](https://github.com/progrium/bashstyle)
-* [Best Practices for Bash Scripts](https://hyperskill.org/learn/step/19230)
-* [Best Practices for Writing Bash Scripts](https://expeditor.chef.io/docs/patterns/bash-scripts/)
-
----
-Perfect 🙌 Let’s complete the final part: **Part 5: Other Best Practices**.
-This section covers Flutter, Dart, R, AI, Cloud, and more — all cleaned up and structured.
-
----
-
-# 🌍 Other Best Practices
+# 📱 Mobile Development
 
 ## 📱 Flutter Best Practices
 
@@ -455,13 +477,122 @@ This section covers Flutter, Dart, R, AI, Cloud, and more — all cleaned up and
 
 ---
 
-## 🎯 Dart & Flutter Best Practices
+## 🎯 Dart Best Practices
 
 * [Dart & Flutter Best Practices](https://lazebny.io/flutter-best-practices/)
 * [Performance Best Practices](https://docs.flutter.dev/perf/best-practices)
 * [Writing Clean Code in Dart: Best Practices & Design Patterns](https://clouddevs.com/dart/clean-code/)
 
 ---
+
+# ☁️ DevOps & Infrastructure
+
+## Cloud & Deployment
+
+### ☁️ AWS Best Practices
+
+* [AWS Best Practices (Roadmap.sh)](https://roadmap.sh/best-practices/aws)
+* [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/)
+
+---
+
+### 📦 Microservices & Cloud-Native Best Practices
+
+* [12 Factors for Building Cloud-Native Apps](https://12factor.net/)
+* [Microservices Best Practices (Microsoft)](https://learn.microsoft.com/en-us/azure/architecture/microservices/)
+* [Cloud-Native Patterns (CNCF)](https://github.com/cncf/presentations)
+
+---
+
+## Security
+
+### 🔐 API Security Best Practices
+
+* [API Security Best Practices (Roadmap.sh)](https://roadmap.sh/best-practices/api-security)
+* [API Security Checklist](https://github.com/shieldfy/API-Security-Checklist)
+
+---
+
+### 🔐 DevSecOps & Security Best Practices
+
+* [OWASP Top 10 (2024)](https://owasp.org/www-project-top-ten/)
+* [Zero Trust Security Model](https://www.microsoft.com/security/blog/zero-trust/)
+* [Best Practices for Secure CI/CD](https://snyk.io/blog/devsecops-best-practices/)
+
+---
+
+# 🤖 AI & Data Science
+
+## 🤖 AI/ML Engineering Best Practices
+
+* [MLOps Best Practices (Google Cloud)](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)
+* [Responsible AI Practices (Google)](https://ai.google/responsibilities/responsible-ai-practices/)
+* [Best Practices for LLM Applications](https://www.promptingguide.ai/)
+* [IBM Data Science – Best Practices](https://github.com/IBM/data-science-best-practices)
+* [AI Best Practices (XenonStack Blog)](https://www.xenonstack.com/blog/ai-best-practices)
+* [Best Practices for Deep Learning in Julia (FastAI.jl)](https://github.com/FluxML/FastAI.jl)
+* [ETL Best Practices with Airflow](https://github.com/gtoonstra/etl-with-airflow)
+
+---
+
+## 🤖 AI Tools for Developers
+
+* [9 of the Best AI Tools for Software Developers in 2024](https://www.stepsize.com/blog/best-ai-tools-for-software-developers)
+* [The Best AI Tools for Developers in 2024](https://daily.dev/blog/the-best-ai-tools-for-developers-in-2024)
+* [Awesome AI Tools](https://github.com/mahseema/awesome-ai-tools) — *@mahseema*
+* [Awesome AI-Powered Developer Tools](https://github.com/jamesmurdza/awesome-ai-devtools) — *@jamesmurdza*
+* [Best Practices for Coding with AI (2024)](https://blog.codacy.com/best-practices-for-coding-with-ai)
+* [AI Tools for Developers: 5 Types of Tools & How to Choose](https://swimm.io/learn/ai-tools-for-developers/ai-tools-for-developers-5-types-of-tools-and-how-to-choose)
+* [The Do's and Don'ts of Using AI in Software Development](https://www.kodeco.com/41989083-the-do-s-and-don-ts-of-using-ai-in-software-development)
+* [10 Best Practices for Secure AI Development](https://snyk.io/blog/10-best-practices-for-securely-developing-with-ai/)
+* [AI Hacks to Maximize Productivity in 2024](https://www.smarttrick.org/post/work-smarter-not-harder-ai-hacks-to-maximize-your-productivity-in-2024)
+
+---
+
+# 🛠️ Development Tools & Practices
+
+## Version Control & Collaboration
+
+### 🔎 Code Review Best Practices
+
+* [Code Review Best Practices (Roadmap.sh)](https://roadmap.sh/best-practices/code-review)
+
+---
+
+### 🧑‍🤝‍🧑 Team & Collaboration Best Practices
+
+* [Remote Engineering Best Practices](https://about.gitlab.com/remote/)
+* [Agile Development Best Practices](https://www.atlassian.com/agile)
+* [Effective Pair Programming](https://martinfowler.com/articles/on-pair-programming.html)
+
+---
+
+## Scripting & Automation
+
+### 🐚 Bash Script Best Practices
+
+* [Bash Best Practices](https://bertvv.github.io/cheat-sheets/Bash.html)
+* [progrium/bashstyle](https://github.com/progrium/bashstyle)
+* [Best Practices for Bash Scripts](https://hyperskill.org/learn/step/19230)
+* [Best Practices for Writing Bash Scripts](https://expeditor.chef.io/docs/patterns/bash-scripts/)
+
+---
+
+## Performance & Architecture
+
+### 🏗️ System Design Best Practices
+
+* [System Design 101](https://github.com/ByteByteGoHq/system-design-101#system-design-101) — *@ByteByteGoHq*
+
+---
+
+### ⚡ Performance & Scalability Best Practices
+
+* [Scaling Applications (Netflix Tech Blog)](https://netflixtechblog.com/)
+
+---
+
+# 🌍 Specialized Languages
 
 ## 📊 R Best Practices
 
@@ -470,43 +601,6 @@ This section covers Flutter, Dart, R, AI, Cloud, and more — all cleaned up and
 * [Best Practices for Writing R Code](https://swcarpentry.github.io/r-novice-inflammation/06-best-practices-R.html) — *@swcarpentry*
 * [R Coding Style Best Practices](https://www.datanovia.com/en/blog/r-coding-style-best-practices/)
 * [Good Practices in R Programming (ETH Zürich)](https://stat.ethz.ch/Teaching/maechler/R/useR_2014/Maechler-2014-pr.pdf)
-
----
-
-## ☁️ AWS Best Practices
-
-* [AWS Best Practices (Roadmap.sh)](https://roadmap.sh/best-practices/aws)
-
----
-
-## 🏗️ System Design
-
-* [System Design 101](https://github.com/ByteByteGoHq/system-design-101#system-design-101) — *@ByteByteGoHq*
-
----
-
-## 🔎 Code Review Best Practices
-
-* [Code Review Best Practices (Roadmap.sh)](https://roadmap.sh/best-practices/code-review)
-
----
-
-## 🤖 AI & Data Science Best Practices
-
-* [IBM Data Science – Best Practices](https://github.com/IBM/data-science-best-practices)
-* [AI Best Practices (XenonStack Blog)](https://www.xenonstack.com/blog/ai-best-practices)
-* [Best Practices for Deep Learning in Julia (FastAI.jl)](https://github.com/FluxML/FastAI.jl)
-* [ETL Best Practices with Airflow](https://github.com/gtoonstra/etl-with-airflow)
-
----
-
-## 🧑‍💻 Best Practices Using AI Tools for Developers
-
-* [Best Practices for Coding with AI (2024)](https://blog.codacy.com/best-practices-for-coding-with-ai)
-* [AI Tools for Developers: 5 Types of Tools & How to Choose](https://swimm.io/learn/ai-tools-for-developers/ai-tools-for-developers-5-types-of-tools-and-how-to-choose)
-* [The Do’s and Don’ts of Using AI in Software Development](https://www.kodeco.com/41989083-the-do-s-and-don-ts-of-using-ai-in-software-development)
-* [10 Best Practices for Secure AI Development](https://snyk.io/blog/10-best-practices-for-securely-developing-with-ai/)
-* [AI Hacks to Maximize Productivity in 2024](https://www.smarttrick.org/post/work-smarter-not-harder-ai-hacks-to-maximize-your-productivity-in-2024)
 
 ---
 
