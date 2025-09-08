@@ -89,31 +89,6 @@ With this collection, I hope to support developers in writing **cleaner, more ma
 * [AI Tools for Developers](#best-practices-using-ai-tools-for-developer)
 
 ---
-
-## 🚀 Getting Started
-
-Hello 👋!
-This list is **constantly updated** with new resources, tutorials, and trends.
-
-If you want to contribute or stay updated:
-
-* Fork this repo
-* Submit a pull request (PR) with your suggested improvements
-
-Together, we can make this a **comprehensive resource** for developers worldwide.
-
----
-
-# 📌 Best Practices by Category
-
----
-Great choice 👍 — multiple parts will keep it clean and easy to use.
-I’ll restructure everything in **consistent, professional Markdown** with all sections covered.
-
-Let’s start with **Part 1: Backend Best Practices**.
-
----
-
 # 🔹 Backend Best Practices
 
 ## 🖥️ C Best Practices
