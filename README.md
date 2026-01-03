@@ -55,7 +55,126 @@ With this collection, I hope to support developers in writing **cleaner, more ma
 
 ---
 
-## 🚀 How to Use This Repository
+## 🚀 Quick Start Setup
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/dereknguyen269/programing-best-practices.git
+cd programing-best-practices
+```
+
+### Step 2: Install Crawler Dependencies (Optional but Recommended)
+
+The crawler downloads all external resources locally for offline access:
+
+```bash
+# Using pip
+pip install -r scripts/crawler/requirements.txt
+
+# Or using pip3
+pip3 install -r scripts/crawler/requirements.txt
+```
+
+### Step 3: Crawl Resources (Optional)
+
+Download all best practices content locally:
+
+```bash
+# Crawl all resources (~150+ links, takes 10-15 minutes)
+python3 scripts/crawler/crawl.py
+
+# Or crawl specific categories
+python3 scripts/crawler/crawl.py --category python
+python3 scripts/crawler/crawl.py --category javascript
+
+# Or crawl a limited number for testing
+python3 scripts/crawler/crawl.py --limit 20
+```
+
+### Step 4: Generate AI Summaries (Optional)
+
+Create condensed summaries optimized for AI assistants:
+
+```bash
+python3 scripts/crawler/generate_summaries.py
+```
+
+### Step 5: Use with Your AI Coding Editor
+
+The repository is now ready! Your AI coding editor will automatically detect:
+
+| AI Editor | Config File | Auto-Detected |
+|-----------|-------------|---------------|
+| **Claude Code** | `CLAUDE.md` | ✅ |
+| **Kiro** | `.kiro/project.md` | ✅ |
+| **Antigravity** | `.agent/instructions.md` | ✅ |
+| **Cursor** | `.cursorrules` | ✅ |
+| **Windsurf** | `.windsurfrules` | ✅ |
+
+---
+
+## 📁 Repository Structure
+
+After setup, your repository will look like:
+
+```
+programing-best-practices/
+├── README.md                   # Main knowledge base (curated links)
+├── CLAUDE.md                   # Claude Code instructions
+├── AGENTS.md                   # Universal AI agent instructions
+├── .agent/                     # Antigravity config
+│   ├── config.json
+│   └── instructions.md
+├── .kiro/                      # Kiro config
+│   └── project.md
+├── .cursorrules                # Cursor AI rules
+├── .windsurfrules              # Windsurf AI rules
+├── content/                    # 📦 Crawled content (after running crawler)
+│   ├── index.json              # Master index of all resources
+│   ├── metadata.yaml           # Crawl statistics
+│   ├── backend_development/    # Content organized by category
+│   ├── frontend_development/
+│   └── ...
+├── summaries/                  # 📝 AI-ready summaries (after generate_summaries.py)
+│   ├── SUMMARY.md              # Master overview
+│   └── [category].md           # Category summaries
+├── scripts/
+│   ├── crawler/                # 🕷️ Crawler tools
+│   │   ├── crawl.py            # Main crawler
+│   │   ├── search.py           # Search tool
+│   │   ├── generate_summaries.py
+│   │   └── requirements.txt
+│   └── setup-kb.sh             # Quick setup script
+├── templates/                  # 📋 Templates for your projects
+│   ├── CLAUDE.template.md
+│   ├── agent/
+│   ├── kiro/
+│   └── cursorrules.template
+└── docs/
+    └── INTEGRATION.md          # Integration guide
+```
+
+---
+
+## 🔍 Searching the Knowledge Base
+
+After crawling, you can search locally:
+
+```bash
+# Search for JavaScript content
+python3 scripts/crawler/search.py "javascript style guide"
+
+# Search within a specific category
+python3 scripts/crawler/search.py "best practices" --category python
+
+# Get results as JSON
+python3 scripts/crawler/search.py "security" --json
+```
+
+---
+
+## 📚 How to Use This Repository
 
 ### For Beginners
 1. **Start with your primary language** — Navigate to your language section in the Table of Contents
@@ -74,6 +193,41 @@ With this collection, I hope to support developers in writing **cleaner, more ma
 2. **Training resource** — Assign relevant sections for team learning
 3. **Quality benchmarks** — Set expectations for code quality
 4. **Architecture decisions** — Reference system design and scalability sections
+
+---
+
+## 🤖 Use for Existing Projects
+
+Want to integrate this knowledge base into your existing project? We provide multiple options:
+
+### Option 1: Quick Setup Script
+
+```bash
+# Run the setup script in your project directory
+curl -sSL https://raw.githubusercontent.com/dereknguyen269/programing-best-practices/main/scripts/setup-kb.sh | bash
+```
+
+### Option 2: Git Submodule
+
+```bash
+# Add as a submodule in your project
+cd your-project
+git submodule add https://github.com/dereknguyen269/programing-best-practices.git .kb/best-practices
+```
+
+### Option 3: Copy Templates
+
+Download the templates from the [`/templates`](./templates) directory and customize for your project:
+
+| Template | Copy To | Purpose |
+|----------|---------|---------|
+| `CLAUDE.template.md` | `CLAUDE.md` | Claude Code |
+| `agent/instructions.template.md` | `.agent/instructions.md` | Antigravity |
+| `agent/config.template.json` | `.agent/config.json` | Antigravity |
+| `kiro/project.template.md` | `.kiro/project.md` | Kiro |
+| `cursorrules.template` | `.cursorrules` | Cursor |
+
+📖 **Full integration guide**: See [`docs/INTEGRATION.md`](./docs/INTEGRATION.md)
 
 ---
 

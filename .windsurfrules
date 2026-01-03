@@ -1,0 +1,20 @@
+# Programming Best Practices Knowledge Base
+
+## Overview
+A curated knowledge base of programming best practices across 30+ languages and frameworks.
+
+## Primary Content
+README.md contains all resources organized by category:
+- Backend, Frontend, Database, Mobile, DevOps, AI, Tools
+
+## Usage
+- Reference specific language sections for best practices
+- Use Featured Resources for must-know guides
+- Cite original source links when providing recommendations
+
+## Top Resources
+- JavaScript: Airbnb Style Guide
+- Go: Uber Style Guide  
+- Ruby: bbatsov Style Guide
+- System Design: System Design 101
+- Security: OWASP Top 10

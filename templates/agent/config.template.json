@@ -1,0 +1,28 @@
+{
+  "name": "[project-name]",
+  "description": "[Brief project description]",
+  "version": "1.0.0",
+  "type": "[web-app|api|cli|library|mobile]",
+  "knowledgeBase": {
+    "enabled": true,
+    "repository": "https://github.com/dereknguyen269/programing-best-practices",
+    "sections": [
+      "[language]-best-practices",
+      "[framework]-best-practices",
+      "api-security-best-practices",
+      "system-design-best-practices"
+    ]
+  },
+  "techStack": {
+    "language": "[language]",
+    "framework": "[framework]",
+    "database": "[database]",
+    "other": []
+  },
+  "bestPractices": {
+    "styleGuide": "[link to style guide]",
+    "testingFramework": "[testing framework]",
+    "linter": "[linter tool]",
+    "formatter": "[formatter tool]"
+  }
+}

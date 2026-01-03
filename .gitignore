@@ -1,0 +1,28 @@
+# Crawled content (regenerate with scripts/crawler/crawl.py)
+/content/
+/summaries/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node (if using npm scripts)
+node_modules/
