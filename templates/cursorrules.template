@@ -1,0 +1,31 @@
+# [PROJECT_NAME]
+
+## Project Type
+[e.g., Web Application, API, CLI]
+
+## Tech Stack
+- Language: [language]
+- Framework: [framework]
+- Database: [database]
+
+## Best Practices Reference
+This project follows the Programming Best Practices knowledge base:
+https://github.com/dereknguyen269/programing-best-practices
+
+### Language Guidelines
+- [Language]: https://github.com/dereknguyen269/programing-best-practices#[language]-best-practices
+
+### Security
+- API Security: https://github.com/dereknguyen269/programing-best-practices#api-security-best-practices
+- OWASP Top 10: https://owasp.org/www-project-top-ten/
+
+### Architecture
+- System Design: https://github.com/dereknguyen269/programing-best-practices#system-design-best-practices
+
+## Project Guidelines
+
+[Your project-specific coding guidelines]
+
+## Code Style
+
+[Your code style preferences]
