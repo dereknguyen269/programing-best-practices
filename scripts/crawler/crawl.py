@@ -69,6 +69,7 @@ class ContentCrawler:
             "failed": 0,
             "skipped": 0
         }
+        self.failed_urls = []  # Track failed URLs with details
 
     async def __aenter__(self):
         timeout = aiohttp.ClientTimeout(total=REQUEST_TIMEOUT)
@@ -189,13 +190,18 @@ class ContentCrawler:
     async def fetch_content(self, url: str) -> Optional[dict]:
         """Fetch and process content from a URL."""
         async with self.semaphore:
+            error_msg = None
             try:
                 # Handle GitHub repos specially
                 if 'github.com' in url and '/blob/' not in url:
-                    return await self._fetch_github_readme(url)
+                    result = await self._fetch_github_readme(url)
+                    if not result:
+                        error_msg = "GitHub README not found (tried main/master branches)"
+                    return result
                 
                 async with self.session.get(url) as response:
                     if response.status != 200:
+                        error_msg = f"HTTP {response.status} - {response.reason}"
                         return None
 
                     content_type = response.headers.get('content-type', '')
@@ -211,12 +217,26 @@ class ContentCrawler:
                             "url": url
                         }
                     else:
+                        error_msg = f"Unsupported content type: {content_type}"
                         return None
 
+            except asyncio.TimeoutError:
+                error_msg = "Request timeout"
+                return None
+            except aiohttp.ClientError as e:
+                error_msg = f"Network error: {str(e)}"
+                return None
             except Exception as e:
-                print(f"Error fetching {url}: {e}")
+                error_msg = f"Unexpected error: {str(e)}"
                 return None
             finally:
+                # Store error if one occurred
+                if error_msg:
+                    self.failed_urls.append({
+                        "url": url,
+                        "error": error_msg,
+                        "timestamp": datetime.now().isoformat()
+                    })
                 await asyncio.sleep(REQUEST_DELAY)
 
     async def _fetch_github_readme(self, url: str) -> Optional[dict]:
@@ -322,6 +342,23 @@ class ContentCrawler:
         
         if not result:
             self.stats["failed"] += 1
+            # Add link details to failed URLs if not already added by fetch_content
+            if not any(f["url"] == link["url"] for f in self.failed_urls):
+                self.failed_urls.append({
+                    "url": link["url"],
+                    "title": link["title"],
+                    "category": link["category"],
+                    "subcategory": link["subcategory"],
+                    "error": "Failed to fetch content",
+                    "timestamp": datetime.now().isoformat()
+                })
+            else:
+                # Update existing entry with link details
+                for f in self.failed_urls:
+                    if f["url"] == link["url"]:
+                        f["title"] = link["title"]
+                        f["category"] = link["category"]
+                        f["subcategory"] = link["subcategory"]
             return False
 
         # Create directory
@@ -416,11 +453,43 @@ class ContentCrawler:
         with open(METADATA_PATH, 'w') as f:
             yaml.dump(metadata, f)
 
+        # Generate failure report if there are failed URLs
+        if self.failed_urls:
+            report_path = CONTENT_DIR / "failed_urls_report.md"
+            with open(report_path, 'w') as f:
+                f.write("# Failed URLs Report\n\n")
+                f.write(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+                f.write(f"Total Failed: {len(self.failed_urls)}\n\n")
+                f.write("---\n\n")
+                
+                # Group by category
+                by_category = {}
+                for failed in self.failed_urls:
+                    category = failed.get('category', 'Unknown')
+                    if category not in by_category:
+                        by_category[category] = []
+                    by_category[category].append(failed)
+                
+                for category, failures in sorted(by_category.items()):
+                    f.write(f"## {category}\n\n")
+                    for failed in failures:
+                        f.write(f"### {failed.get('title', 'Unknown Title')}\n\n")
+                        f.write(f"- **URL**: {failed['url']}\n")
+                        f.write(f"- **Error**: {failed.get('error', 'Unknown error')}\n")
+                        if failed.get('subcategory'):
+                            f.write(f"- **Subcategory**: {failed['subcategory']}\n")
+                        f.write(f"- **Timestamp**: {failed.get('timestamp', 'N/A')}\n")
+                        f.write("\n")
+            
+            print(f"\n⚠️  Failed URLs report saved to: {report_path}")
+
         # Print summary
         print("\n📊 Crawl Summary:")
         print(f"   ✅ Success: {self.stats['success']}")
         print(f"   ⏭️  Skipped: {self.stats['skipped']}")
         print(f"   ❌ Failed:  {self.stats['failed']}")
+        if self.failed_urls:
+            print(f"\n📋 Failed URLs Report: {CONTENT_DIR / 'failed_urls_report.md'}")
         print(f"\n📁 Content saved to: {CONTENT_DIR}")
 
 

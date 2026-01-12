@@ -203,7 +203,8 @@ def main():
         print(f"  Generating: {cat}...")
         summary = generate_category_summary(cat, items)
         
-        filename = cat.lower().replace(' ', '_').replace('&', 'and') + ".md"
+        # Sanitize filename: replace slashes and other problematic characters
+        filename = cat.lower().replace(' ', '_').replace('&', 'and').replace('/', '_') + ".md"
         filepath = SUMMARIES_DIR / filename
         
         with open(filepath, 'w', encoding='utf-8') as f:

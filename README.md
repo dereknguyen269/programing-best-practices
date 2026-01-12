@@ -57,28 +57,83 @@ With this collection, I hope to support developers in writing **cleaner, more ma
 
 ## 🚀 Quick Start Setup
 
-### Step 1: Clone the Repository
+### 🎯 Automated Setup (Recommended)
+
+The fastest way to get started is using our automated setup script:
+
+```bash
+# Clone the repository
+git clone https://github.com/dereknguyen269/programing-best-practices.git
+cd programing-best-practices
+
+# Run the interactive setup script
+./scripts/quick-start.sh
+```
+
+The script will guide you through different setup options:
+
+| Mode | Time | What's Included |
+|------|------|-----------------|
+| **Minimal** | ~1 min | Dependencies only, no crawling |
+| **Test** | ~2-3 min | Dependencies + 20 sample resources |
+| **Full** | ~10-15 min | Everything + all 150+ resources + AI summaries |
+| **Custom** | Varies | Choose specific categories to crawl |
+
+**Quick Options:**
+
+```bash
+# Minimal setup (just dependencies)
+./scripts/quick-start.sh --minimal
+
+# Full setup (everything)
+./scripts/quick-start.sh --full
+
+# Test with 20 resources
+./scripts/quick-start.sh --limit 20
+
+# Crawl only Python resources
+./scripts/quick-start.sh --category python
+```
+
+📖 **For detailed documentation and troubleshooting**, see the [Quick Start Guide](./docs/QUICK_START_GUIDE.md)
+
+
+---
+
+### 📋 Manual Setup (Alternative)
+
+Prefer to set up manually? Follow these steps:
+
+#### Step 1: Clone the Repository
 
 ```bash
 git clone https://github.com/dereknguyen269/programing-best-practices.git
 cd programing-best-practices
 ```
 
-### Step 2: Install Crawler Dependencies (Optional but Recommended)
+#### Step 2: Install Crawler Dependencies (Optional but Recommended)
 
 The crawler downloads all external resources locally for offline access:
 
 ```bash
-# Using pip
-pip install -r scripts/crawler/requirements.txt
+# Create virtual environment (recommended)
+python3 -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 
-# Or using pip3
-pip3 install -r scripts/crawler/requirements.txt
+# Install dependencies
+pip install -r scripts/crawler/requirements.txt
 ```
 
-### Step 3: Crawl Resources (Optional)
+#### Step 3: Crawl Resources (Optional)
 
 Download all best practices content locally:
+
+> **Note**: Make sure your virtual environment is activated before running these commands:
+> ```bash
+> source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+> ```
+> 
+> Or use the venv Python directly: `.venv/bin/python3` instead of `python3`
 
 ```bash
 # Crawl all resources (~150+ links, takes 10-15 minutes)
@@ -90,9 +145,12 @@ python3 scripts/crawler/crawl.py --category javascript
 
 # Or crawl a limited number for testing
 python3 scripts/crawler/crawl.py --limit 20
+
+# Update existing content
+python3 scripts/crawler/crawl.py --update
 ```
 
-### Step 4: Generate AI Summaries (Optional)
+#### Step 4: Generate AI Summaries (Optional)
 
 Create condensed summaries optimized for AI assistants:
 
@@ -100,7 +158,7 @@ Create condensed summaries optimized for AI assistants:
 python3 scripts/crawler/generate_summaries.py
 ```
 
-### Step 5: Use with Your AI Coding Editor
+#### Step 5: Use with Your AI Coding Editor
 
 The repository is now ready! Your AI coding editor will automatically detect:
 
