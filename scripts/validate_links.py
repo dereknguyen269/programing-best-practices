@@ -1,24 +1,28 @@
 #!/usr/bin/env python3
 """Check every HTTP link in the repository's Markdown files.
 
-Exit status is 0 when no link is broken, 1 when at least one is, so CI can
-gate on it.
+Exit status is 0 when no link is *confirmed broken*, 1 when at least one is, so
+CI can gate on it.
 
-Links are sorted into three buckets:
+Why "confirmed" rather than "not 200": the check runs from GitHub-hosted
+runners, whose datacenter IPs get 403'd by a long list of sites that serve the
+page perfectly to a browser. Treating 403 as a failure makes the gate red on
+links that are fine (docs.solidjs.com, baeldung.com and toptal.com all returned
+200 locally and 403 from the runner during development). Every failure is
+therefore re-checked against the Wayback Machine before it is reported as
+broken; anything with a recent snapshot is a live page we merely cannot reach.
 
-  ok       2xx, or a 3xx that lands on a 2xx
-  blocked  403/429 from a host known to reject automated clients
-           (see link_check_config.json) -- a real page we cannot reach
-  broken   everything else: 404/410, 5xx, DNS failure, TLS error, timeout
+Buckets:
 
-Only `broken` fails the run. Transient failures (timeouts, 5xx, connection
-resets) are retried before being reported, because link checks in CI are
-notoriously flaky against slow hosts.
+  ok        2xx, or a 3xx that lands on a 2xx
+  blocked   401/403, and the host is in blocked_hosts
+  throttled 429 -- never means the page is gone
+  broken    everything else, including 403/404 that Wayback also lacks
 
 Usage:
     python3 scripts/validate_links.py                # human-readable summary
     python3 scripts/validate_links.py --json out.json
-    python3 scripts/validate_links.py --report docs/failed_urls_report.md
+    python3 scripts/validate_links.py --report failed_urls_report.md
 """
 
 from __future__ import annotations
@@ -35,6 +39,7 @@ import sys
 import threading
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 from collections import defaultdict
 from urllib.parse import urlparse
@@ -49,14 +54,16 @@ DEFAULT_CONFIG = {
     "per_host_workers": 2,
     "blocked_hosts": [],
     "ignored_urls": [],
+    # A Wayback snapshot this recent proves the page was live not long ago.
+    "wayback_max_age_days": 730,
 }
 
-# 403/401 mean "automated client rejected", not "page missing".
+# 401/403 mean "this client was rejected", not "the page is missing".
 BLOCKED_STATUSES = {401, 403}
-# 429 means the server is throttling us. It never means the page is gone, so it
-# is never reported as broken -- our own parallel workers can trigger it.
+# 429 means we are being throttled. It never means the page is gone, and our own
+# parallel workers can trigger it.
 THROTTLED_STATUSES = {429}
-# 5xx and these are worth another attempt before we call them dead.
+# Worth another attempt before we call them dead.
 RETRY_STATUSES = {408, 425, 429, 500, 502, 503, 504}
 RETRY_EXCEPTIONS = (
     urllib.error.URLError,
@@ -102,22 +109,14 @@ def collect_links() -> dict[str, list[str]]:
             for lineno, line in enumerate(f, start=1):
                 for _text, url in MD_LINK_RE.findall(line):
                     url = url.rstrip(')"\'>.,;')
-                    if url not in locations[url]:
-                        locations[url].append(f"{rel}:{lineno}")
+                    loc = f"{rel}:{lineno}"
+                    if loc not in locations[url]:
+                        locations[url].append(loc)
     return dict(locations)
 
 
-def classify(url: str, status: int, blocked_hosts: set[str]) -> str:
-    if 200 <= status < 300:
-        return "ok"
-    if status in THROTTLED_STATUSES:
-        return "throttled"
-    host = (urlparse(url).hostname or "").lower()
-    if status in BLOCKED_STATUSES and any(
-        host == h or host.endswith("." + h) for h in blocked_hosts
-    ):
-        return "blocked"
-    return "broken"
+def host_matches(host: str, hosts: set[str]) -> bool:
+    return any(host == h or host.endswith("." + h) for h in hosts)
 
 
 def check_url(url: str, cfg: dict) -> tuple[str, int, str]:
@@ -149,6 +148,48 @@ def check_url(url: str, cfg: dict) -> tuple[str, int, str]:
     return (url, last[0], last[1])
 
 
+def wayback_snapshot(url: str, cfg: dict) -> str | None:
+    """Return the timestamp of a recent snapshot, else None.
+
+    Used to tell 'this site blocks our runner' apart from 'this page is gone'.
+    """
+    api = "http://archive.org/wayback/available?url=" + urllib.parse.quote(url, safe="")
+    req = urllib.request.Request(api, headers={"User-Agent": USER_AGENT})
+    try:
+        with urllib.request.urlopen(req, timeout=cfg["timeout_seconds"]) as resp:
+            data = json.load(resp)
+    except Exception:
+        return None
+    snap = (data.get("archived_snapshots") or {}).get("closest") or {}
+    if snap.get("status") != "200":
+        return None
+    stamp = snap.get("timestamp", "")
+    if len(stamp) < 8 or not stamp[:8].isdigit():
+        return None
+    try:
+        archived = time.strptime(stamp[:8], "%Y%m%d")
+    except ValueError:
+        return None
+    age_days = (time.time() - time.mktime(archived)) / 86400
+    if age_days > float(cfg["wayback_max_age_days"]):
+        return None
+    return stamp
+
+
+def classify(url: str, status: int, blocked_hosts: set[str], snapshot: str | None) -> str:
+    if 200 <= status < 300:
+        return "ok"
+    if status in THROTTLED_STATUSES:
+        return "throttled"
+    if snapshot:
+        # Reachable by browsers and archived recently: not broken, just refused.
+        return "blocked"
+    host = (urlparse(url).hostname or "").lower()
+    if status in BLOCKED_STATUSES and host_matches(host, blocked_hosts):
+        return "blocked"
+    return "broken"
+
+
 def write_report(path: str, results: list[dict], counts: dict[str, int]) -> None:
     os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
     lines = [
@@ -164,7 +205,7 @@ def write_report(path: str, results: list[dict], counts: dict[str, int]) -> None
     for bucket, title in (
         ("broken", "Broken"),
         ("throttled", "Throttled (429, retry later)"),
-        ("blocked", "Blocked (bot protection)"),
+        ("blocked", "Blocked (bot protection or unreachable from CI)"),
     ):
         rows = [r for r in results if r["classification"] == bucket]
         lines += [f"## {title}", ""]
@@ -176,6 +217,7 @@ def write_report(path: str, results: list[dict], counts: dict[str, int]) -> None
                 f"### {r['url']}",
                 "",
                 f"- **Status**: {r['status']} — {r['message']}",
+                f"- **Wayback snapshot**: {r.get('wayback') or 'none'}",
                 f"- **Referenced by**: {', '.join(r['locations'])}",
                 "",
             ]
@@ -194,15 +236,13 @@ def main() -> int:
     blocked_hosts = {h.lower() for h in cfg["blocked_hosts"]}
 
     locations = collect_links()
-    ignored = set(cfg.get("ignored_urls") or [])
-    for url in ignored:
+    for url in cfg.get("ignored_urls") or []:
         locations.pop(url, None)
 
     print(f"Found {len(locations)} unique URLs across Markdown files.")
 
-    results = []
     # Cap concurrency per host: hitting one domain with 24 workers at once is
-    # what earns a 429, and the retry makes it worse.
+    # what earns a 429, and the retry then makes it worse.
     host_semaphores: dict[str, threading.Semaphore] = {}
     host_lock = threading.Lock()
     per_host = max(1, int(cfg.get("per_host_workers", 2)))
@@ -214,6 +254,7 @@ def main() -> int:
         with sem:
             return check_url(url, cfg)
 
+    results = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=int(cfg["workers"])) as pool:
         futures = {pool.submit(guarded_check, url): url for url in locations}
         for future in concurrent.futures.as_completed(futures):
@@ -223,10 +264,29 @@ def main() -> int:
                     "url": url,
                     "status": status,
                     "message": message,
-                    "classification": classify(url, status, blocked_hosts),
                     "locations": locations.get(url, []),
+                    "wayback": None,
+                    "classification": None,
                 }
             )
+
+    # Confirm every failure against Wayback before calling it broken.
+    candidates = [r for r in results if not 200 <= r["status"] < 300]
+    if candidates:
+        print(f"Cross-checking {len(candidates)} non-200 URLs against Wayback...")
+        with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
+            snaps = {r["url"]: pool.submit(wayback_snapshot, r["url"], cfg) for r in candidates}
+            for url, fut in snaps.items():
+                try:
+                    snap = fut.result()
+                except Exception:
+                    snap = None
+                for r in results:
+                    if r["url"] == url:
+                        r["wayback"] = snap
+
+    for r in results:
+        r["classification"] = classify(r["url"], r["status"], blocked_hosts, r["wayback"])
 
     counts = {
         "total": len(results),
@@ -240,7 +300,7 @@ def main() -> int:
     print("--- Link Validation Summary ---")
     print(f"Total Unique Links: {counts['total']}")
     print(f"OK: {counts['ok']}")
-    print(f"Blocked (bot protection, not counted as broken): {counts['blocked']}")
+    print(f"Blocked (not reachable from CI, not counted as broken): {counts['blocked']}")
     print(f"Throttled (429, not counted as broken): {counts['throttled']}")
     print(f"Broken: {counts['broken']}")
 
@@ -257,6 +317,8 @@ def main() -> int:
         print(f"\n--- {heading} ---")
         for r in rows:
             print(f"[{r['status']}] {r['url']} -> {r['message']}")
+            if r["wayback"]:
+                print(f"        wayback snapshot: {r['wayback']}")
             print(f"        referenced by: {', '.join(r['locations'])}")
 
     if args.json:
