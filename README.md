@@ -552,15 +552,15 @@ Here are some standout resources that every developer should know:
 * [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html) — 🏢 *Google*
 * [Java Best Practices (Oracle)](https://docs.oracle.com/javase/tutorial/java/javaOO/index.html) — 🏢 *Oracle Official*
 * [Effective Java (Joshua Bloch)](https://www.oreilly.com/library/view/effective-java-3rd/9780134686097/) — 🏢 *Industry Standard*
-* [Java Coding Best Practices (Baeldung)](https://www.baeldung.com/java-coding-standards-and-best-practices) — *@baeldung*
+* [Java Coding Best Practices (Baeldung)](https://www.baeldung.com/java-clean-code) — *@baeldung*
 * [Java Best Practices Guide](https://howtodoinjava.com/java-best-practices/)
-* [Java Performance Tuning](https://www.oracle.com/java/technologies/performance-tuning.html) — 🏢 *Oracle Official*
+* [Java Performance Tuning](https://docs.oracle.com/en/java/javase/21/performance/) — 🏢 *Oracle Official*
 
 ---
 
 ### 🌀 Kotlin Best Practices
 
-* [Best Practices in Kotlin](https://github.com/JackyAndroid/kotlin-best-practices) — *@JackyAndroid*
+* [Kotlin Coding Conventions](https://kotlinlang.org/docs/coding-conventions.html) — 🏢 *JetBrains Official*
 * [Kotlin Style Guide](https://github.com/yole/kotlin-style-guide) — *@yole*
 * [Kotlin Style Guide (Ray Wenderlich)](https://github.com/raywenderlich/kotlin-style-guide) — *@raywenderlich*
 
@@ -585,7 +585,7 @@ Here are some standout resources that every developer should know:
 ### 🟢 Node.js Best Practices
 
 * [Node.js Best Practices](https://github.com/goldbergyoni/nodebestpractices) — 🏢 *@goldbergyoni (community standard)*
-* [Node.js Security Best Practices](https://nodejs.org/en/docs/guides/security/) — 🏢 *Node.js Official*
+* [Node.js Security Best Practices](https://nodejs.org/en/learn/getting-started/security-best-practices) — 🏢 *Node.js Official*
 * [Node.js Style Guide (Airbnb fork)](https://github.com/airbnb/javascript) — 🏢 *Airbnb*
 * [Node.js Performance Best Practices](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs) — 🏢 *Node.js Official*
 * [Express.js Best Practices (Official)](https://expressjs.com/en/advanced/best-practice-performance.html) — 🏢 *Express Official*
@@ -629,8 +629,8 @@ Here are some standout resources that every developer should know:
 * [Rails Style Guide](https://github.com/bbatsov/rails-style-guide) — *@bbatsov*
 * [rails_best_practices](https://github.com/flyerhzm/rails_best_practices) — *@flyerhzm*
 * [RSpec Style Guide](https://github.com/reachlocal/rspec-style-guide) — *@reachlocal*
-* [RSpec Best Practices](https://github.com/abinoda/rspec-best-practices) — *@abinoda*
-* [Rails Database Best Practices](https://blog.carbonfive.com/rails-database-best-practices/)
+* [RSpec Best Practices](https://web.archive.org/web/2024/https://github.com/abinoda/rspec-best-practices) — *@abinoda*
+* [Rails Database Best Practices](https://web.archive.org/web/2024/https://blog.carbonfive.com/rails-database-best-practices/)
 * [Active Record Query Optimization Tips](https://medium.com/@User3141592/active-record-query-performance-tips-a3c3947b968)
 * [ActiveRecord SQL Query Optimization](https://phrase.com/blog/posts/activerecord-speed-up-your-sql-queries/)
 * [Arel Cheatsheet](https://devhints.io/arel)
@@ -666,12 +666,12 @@ Here are some standout resources that every developer should know:
 
 * [GraphQL Best Practices (Official)](https://graphql.org/learn/best-practices/) — 🏢 *GraphQL Official*
 * [Production Ready GraphQL](https://book.productionreadygraphql.com/)
-* [GraphQL Security Best Practices](https://escape.tech/blog/graphql-security-best-practices-guide/)
+* [GraphQL Security Cheat Sheet (OWASP)](https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html) — 🏢 *OWASP Official*
 * [Awesome GraphQL](https://github.com/chentsulin/awesome-graphql) — *@chentsulin*
 
 ### 🔌 tRPC Best Practices
 
-* [tRPC Best Practices (Official)](https://trpc.io/docs/server/router) — 🏢 *tRPC Official*
+* [tRPC Best Practices (Official)](https://trpc.io/docs/server/routers) — 🏢 *tRPC Official*
 * [tRPC React Query Integration](https://trpc.io/docs/client/react) — 🏢 *tRPC Official*
 * [tRPC Security Best Practices](https://trpc.io/docs/server/merging-routers) — 🏢 *tRPC Official*
 
@@ -714,7 +714,7 @@ Here are some standout resources that every developer should know:
 * [Go Best Practices](https://github.com/mehrdadrad/GoBestPractices) — *@mehrdadrad*
 * [Go Style Guide](https://github.com/AgtLucas/go-style-guide) — *@AgtLucas*
 * [Golang Tutorial Series](https://golangbot.com/learn-golang-series/)
-* [Golang Cheat Sheet (Golang Dojo)](https://products.golangdojo.com/golang-cheat-sheet-by-golang-dojo)
+* [Go Cheat Sheet](https://github.com/a8m/golang-cheat-sheet) — *@a8m*
 * [Soham Kamani – Golang](https://www.sohamkamani.com/golang/)
 * [Design Patterns in Go](https://refactoring.guru/design-patterns/go) — *Refactoring.Guru*
 
@@ -758,7 +758,7 @@ Here are some standout resources that every developer should know:
 ### 🌐 HTML Best Practices
 
 * [HTML Best Practices](https://github.com/hail2u/html-best-practices) — *@hail2u*
-* [HTML5 (and Some CSS) Best Practice](https://www.codeproject.com/Tips/666578/HTML-and-Some-CSS-Best-Practice)
+* [HTML5 (and Some CSS) Best Practice](https://web.archive.org/web/2024/https://www.codeproject.com/Tips/666578/HTML-and-Some-CSS-Best-Practice)
 * [Frontend Guidelines](https://github.com/bendc/frontend-guidelines) — *@bendc*
 * [Google HTML Style Guide](https://google.github.io/styleguide/htmlcssguide.html#HTML) — *@google*
 
@@ -789,7 +789,7 @@ Here are some standout resources that every developer should know:
 * [Pragmatic JavaScript Standards](https://github.com/stevekwan/best-practices/blob/master/javascript/best-practices.md) — *@stevekwan*
 * [JavaScript 规范](https://github.com/adamlu/javascript-style-guide) — *@adamlu*
 * [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html) — *@google*
-* [JavaScript The Right Way](https://jstherightway.org/) — *@braziljs*
+* [JavaScript The Right Way](https://github.com/braziljs/js-the-right-way) — *@braziljs*
 * [MDN JavaScript Guidelines](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines/JavaScript) — *@mozilla*
 * [W3C JavaScript Best Practices](https://www.w3.org/wiki/JavaScript_best_practices) — *@w3c*
 * [Clean Code JavaScript](https://github.com/ryanmcdermott/clean-code-javascript) — *@ryanmcdermott*
@@ -829,7 +829,7 @@ Here are some standout resources that every developer should know:
 * [Vue.js Style Guide (Official)](https://vuejs.org/style-guide/) — 🏢 *Vue.js Official*
 * [Vue 3 Best Practices (Official)](https://vuejs.org/guide/best-practices/performance.html) — 🏢 *Vue.js Official*
 * [Vue 3 Composition API Guide](https://vuejs.org/guide/extras/composition-api-faq) — 🏢 *Vue.js Official*
-* [12 VueJS Best Practices for Pro Developers](https://learnvue.co/2020/01/12-vuejs-best-practices-for-pro-developers/)
+* [Vue.js Best Practices](https://learnvue.co/articles/vue-best-practices)
 * [10 Good Practices for Large Vue.js Projects](https://www.telerik.com/blogs/10-good-practices-building-maintaining-large-vuejs-projects)
 * [Vue Best Practices (Awesome Vue)](https://github.com/vuejs/awesome-vue) — *@vuejs*
 
@@ -856,7 +856,7 @@ Here are some standout resources that every developer should know:
 
 * [Nuxt Style Guide (Official)](https://nuxt.com/docs) — 🏢 *Nuxt Official*
 * [10 Nuxt Best Practices](https://climbtheladder.com/10-nuxt-best-practices/)
-* [Nuxt 3 Best Practices for Production](https://masteringnuxt.com/blog/nuxt-3-best-practices)
+* [Nuxt Best Practices & Tutorials](https://masteringnuxt.com/blog)
 
 ### 🧩 Svelte Best Practices
 
@@ -925,7 +925,7 @@ Here are some standout resources that every developer should know:
 
 * [Prisma Best Practices (Official)](https://www.prisma.io/docs/orm/prisma-client/queries/crud) — 🏢 *Prisma Official*
 * [Prisma Data Modeling Guide](https://www.prisma.io/docs/orm/prisma-schema/data-model) — 🏢 *Prisma Official*
-* [Prisma Performance Optimization](https://www.prisma.io/docs/orm/prisma-client/performance) — 🏢 *Prisma Official*
+* [Prisma Performance Optimization](https://www.prisma.io/docs/orm/prisma-client/queries/query-optimization-performance) — 🏢 *Prisma Official*
 * [Prisma Security Best Practices](https://www.prisma.io/docs/orm/prisma-client/deployment) — 🏢 *Prisma Official*
 
 ### ☁️ Drizzle ORM Best Practices
@@ -972,7 +972,7 @@ Here are some standout resources that every developer should know:
 * [Microservices Best Practices (Microsoft)](https://learn.microsoft.com/en-us/azure/architecture/microservices/) — 🏢 *Microsoft*
 * [Microservices Patterns (Chris Richardson)](https://microservices.io/patterns/index.html) — 🏢 *@crichardson*
 * [Cloud-Native Patterns (CNCF)](https://github.com/cncf/presentations) — 🏢 *CNCF*
-* [Beyond the 12-Factor App (Heroku)](https://www.heroku.com/podcasts/codeish/72-beyond-the-12-factor-app) — *Heroku*
+* [The Twelve-Factor App](https://12factor.net/) — *@heroku*
 
 ---
 
@@ -1001,7 +1001,7 @@ Here are some standout resources that every developer should know:
 * [API Security Best Practices (Roadmap.sh)](https://roadmap.sh/best-practices/api-security) — 🏢 *Roadmap.sh*
 * [API Security Checklist](https://github.com/shieldfy/API-Security-Checklist) — *@shieldfy*
 * [OWASP API Security Top 10](https://owasp.org/API-Security/editions/2023/en/0x00-header/) — 🏢 *OWASP*
-* [JWT Best Practices (Auth0)](https://auth0.com/blog/ten-things-you-should-know-about-tokens/) — 🏢 *Auth0*
+* [JWT Best Practices (Auth0)](https://auth0.com/blog/ten-things-you-should-know-about-tokens-and-cookies/) — 🏢 *Auth0*
 * [REST API Security Best Practices (Microsoft)](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design) — 🏢 *Microsoft*
 
 ---
@@ -1010,7 +1010,7 @@ Here are some standout resources that every developer should know:
 
 * [OWASP Top 10 (2024)](https://owasp.org/www-project-top-ten/)
 * [Zero Trust Security Model](https://www.microsoft.com/security/blog/zero-trust/)
-* [Best Practices for Secure CI/CD](https://snyk.io/blog/devsecops-best-practices/)
+* [Best Practices for Secure CI/CD](https://snyk.io/learn/devsecops/)
 
 ---
 
@@ -1042,7 +1042,7 @@ Here are some standout resources that every developer should know:
 * [Best Practices for Coding with AI](https://blog.codacy.com/best-practices-for-coding-with-ai)
 * [The Do's and Don'ts of Using AI in Software Development](https://www.kodeco.com/41989083-the-do-s-and-don-ts-of-using-ai-in-software-development)
 * [10 Best Practices for Secure AI Development](https://snyk.io/blog/10-best-practices-for-securely-developing-with-ai/)
-* [Evaluating AI Code Generators](https://martinfowler.com/articles/2024-evaluating-code-gen-tools.html) — *@martinfowler*
+* [Exploring Generative AI](https://martinfowler.com/articles/exploring-gen-ai.html) — *@martinfowler*
 * [AI Coding Guidelines (Google)](https://google.github.io/styleguide/) — 🏢 *Google*
 
 ---
@@ -1055,7 +1055,7 @@ Here are some standout resources that every developer should know:
 
 * [Code Review Best Practices (Roadmap.sh)](https://roadmap.sh/best-practices/code-review)
 * [Google Code Review Developer Guide](https://google.github.io/eng-practices/review/) — *@google*
-* [Code Review Best Practices (Palantir)](https://github.com/palantir/gradle-baseline/blob/develop/docs/best-practices/code-reviews/README.md) — *@palantir*
+* [Code Review Best Practices (Palantir)](https://github.com/palantir/gradle-baseline/blob/develop/docs/best-practices/code-reviews/readme.md) — *@palantir*
 
 ---
 
@@ -1071,7 +1071,7 @@ Here are some standout resources that every developer should know:
 
 ### 🧑‍🤝‍🧑 Team & Collaboration Best Practices
 
-* [Remote Engineering Best Practices](https://about.gitlab.com/remote/)
+* [Remote Engineering Best Practices](https://about.gitlab.com/company/culture/all-remote/)
 * [Agile Development Best Practices](https://www.atlassian.com/agile)
 * [Effective Pair Programming](https://martinfowler.com/articles/on-pair-programming.html)
 
@@ -1084,7 +1084,7 @@ Here are some standout resources that every developer should know:
 * [Bash Best Practices](https://bertvv.github.io/cheat-sheets/Bash.html)
 * [progrium/bashstyle](https://github.com/progrium/bashstyle)
 * [Best Practices for Bash Scripts](https://hyperskill.org/learn/step/19230)
-* [Best Practices for Writing Bash Scripts](https://expeditor.chef.io/docs/patterns/bash-scripts/)
+* [Shell Style Guide (Google)](https://google.github.io/styleguide/shellguide.html) — 🏢 *Google Official*
 
 ### 🧹 Linting & Formatting
 
@@ -1092,8 +1092,8 @@ Here are some standout resources that every developer should know:
 
 * [Biome Getting Started](https://biomejs.dev/guides/getting-started/) — 🏢 *Biome Official*
 * [Biome Configuration Guide](https://biomejs.dev/reference/configuration/) — 🏢 *Biome Official*
-* [Biome Linter Rules](https://biomejs.dev/linter/rules/) — 🏢 *Biome Official*
-* [Biome vs ESLint/Prettier Migration](https://biomejs.dev/guides/convert-eslint-prettier/) — 🏢 *Biome Official*
+* [Biome Linter Rules](https://biomejs.dev/linter/) — 🏢 *Biome Official*
+* [Biome vs ESLint/Prettier Migration](https://biomejs.dev/guides/migrate-eslint-prettier/) — 🏢 *Biome Official*
 
 ### 🏗️ Monorepo Best Practices
 
@@ -1102,14 +1102,14 @@ Here are some standout resources that every developer should know:
 * [Turborepo Getting Started](https://turbo.build/repo/docs) — 🏢 *Vercel Official*
 * [Turborepo Configuration Guide](https://turbo.build/repo/docs/reference/configuration) — 🏢 *Vercel Official*
 * [Turborepo Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) — 🏢 *Vercel Official*
-* [Migrating to Turborepo](https://turbo.build/repo/docs/guides/migration) — 🏢 *Vercel Official*
+* [Migrating to Turborepo](https://turborepo.com/docs/guides/migrating-from-nx) — 🏢 *Vercel Official*
 
 #### Nx Best Practices
 
 * [Nx Getting Started](https://nx.dev/getting-started/intro) — 🏢 *Nx Official*
 * [Nx Best Practices Guide](https://nx.dev/recipes/enforce-module-boundaries) — 🏢 *Nx Official*
-* [Nx Monorepo Patterns](https://nx.dev/concepts/decisions/architecture) — 🏢 *Nx Official*
-* [Nx vs Turborepo Trade-offs](https://nx.dev/resources/migration/turbo) — 🏢 *Nx Official*
+* [Nx Monorepo Patterns](https://nx.dev/concepts/decisions/overview) — 🏢 *Nx Official*
+* [Nx vs Turborepo Trade-offs](https://nx.dev/docs/kb/nx-vs-turborepo) — 🏢 *Nx Official*
 
 ---
 
@@ -1187,9 +1187,9 @@ We believe in the power of community! Here's how you can participate:
 - **⭐ Star the Repo** — Show your support and help others discover this resource
 - **🔄 Share** — Spread the word on social media, blogs, or with your team
 
-### 📢 Discussions
-- **Questions?** Open a [GitHub Discussion](https://github.com/dereknguyen269/programing-best-practices/discussions)
-- **Ideas?** Share your thoughts in the [Ideas category](https://github.com/dereknguyen269/programing-best-practices/discussions/categories/ideas)
+### 📢 Questions & Ideas
+- **Questions?** Open a [GitHub Issue](https://github.com/dereknguyen269/programing-best-practices/issues)
+- **Ideas?** Share your thoughts in a [feature request](https://github.com/dereknguyen269/programing-best-practices/issues/new)
 - **Showcase** — Share how you're using these best practices in your projects
 
 ### 🏆 Contributors

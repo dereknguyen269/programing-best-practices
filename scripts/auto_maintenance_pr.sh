@@ -3,7 +3,8 @@
 
 set -e
 
-REPO_DIR="/home/ubuntu/repo"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_DIR="$(dirname "$SCRIPT_DIR")"
 cd "$REPO_DIR"
 
 echo "=== Starting Automated Repository Maintenance ==="

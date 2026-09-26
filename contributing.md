@@ -63,7 +63,7 @@ If you're improving AI integration, please update the relevant configuration fil
 
 Have ideas for better organization or new features? 
 - Open an [Issue](https://github.com/dereknguyen269/programing-best-practices/issues)
-- Start a [Discussion](https://github.com/dereknguyen269/programing-best-practices/discussions)
+- Request a feature in the [issue tracker](https://github.com/dereknguyen269/programing-best-practices/issues/new)
 
 ## 🙏 Thank You!
 
