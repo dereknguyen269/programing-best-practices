@@ -1,8 +1,9 @@
 name: Link Check
 
-# Fails a pull request when a Markdown link 404s, so broken resources never
-# reach master. Links that only bot-block (see scripts/link_check_config.json)
-# are reported but do not fail the build.
+# Fails a pull request when a Markdown link is genuinely dead, so broken
+# resources never reach master. A 403 from the runner is not proof of a dead
+# page -- many sites refuse datacenter IPs -- so failures are cross-checked
+# against the Wayback Machine and only confirmed 404s fail the build.
 
 on:
   pull_request:

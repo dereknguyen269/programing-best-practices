@@ -21,22 +21,39 @@ only when a link is actually broken.
 `validate_links.py` sorts every URL into four buckets. Only `broken` fails CI.
 
 - `ok` — 2xx, or a 3xx that lands on a 2xx
-- `blocked` — 401/403 from a host in `blocked_hosts`. The page is live but
-  rejects automated clients, so these must never fail the build.
+- `blocked` — 401/403 that a recent Wayback snapshot proves is still live, or
+  from a host in `blocked_hosts`. The page is fine; we just cannot reach it.
 - `throttled` — 429. Never means the page is gone; our own parallel workers can
   trigger it. `per_host_workers` caps concurrency per domain to reduce this.
-- `broken` — 404/410, 5xx after retries, DNS/TLS failure, timeout
+- `broken` — 404/410, 5xx after retries, DNS/TLS failure, timeout, or a 403/404
+  that Wayback has no recent snapshot of
+
+### Why the Wayback cross-check matters
+
+The check runs from GitHub-hosted runners, whose datacenter IPs get 403'd by a
+long list of sites that serve the page perfectly to a browser. During
+development `docs.solidjs.com`, `baeldung.com` and `toptal.com` all returned
+**200 locally and 403 from the runner**. Treating 403 as broken made the gate
+red on healthy links, and allowlisting every CDN-fronted site does not scale.
+
+So before any non-200 is called broken, it is checked against
+`http://archive.org/wayback/available`. A snapshot younger than
+`wayback_max_age_days` (default 730) means the page is live and merely
+unreachable from CI, so it is classified `blocked`. That is what keeps the gate
+meaningful: it fails on pages that are actually gone.
 
 ### When a link fails
 
-1. Check whether it is a real 404 or just bot protection. A real browser UA
-   still getting 403, plus a recent 200 snapshot from
-   `http://archive.org/wayback/available?url=<url>`, means the host blocks bots
-   — add the host to `blocked_hosts`, do not "fix" the link.
-2. For real 404s, find a current replacement and add a rule to the
+1. The validator already does the browser-UA and Wayback checks for you —
+   re-read its output. A `broken` entry has no recent Wayback snapshot, which
+   is strong evidence the page is really gone.
+2. If it is a real 404, find a current replacement and add a rule to the
    `replacements` dict in `scripts/fix_links.py` so future runs stay fixed.
 3. For retired-but-valuable content, wrap in
    `https://web.archive.org/web/2024/<original-url>`.
+4. Only add a host to `blocked_hosts` when it throttles or blocks us but Wayback
+   has no snapshot to prove it is alive. Toptal is the existing example: its
+   article URLs return 429 while `/python` and `/` return 200.
 
 ### Gotchas
 
