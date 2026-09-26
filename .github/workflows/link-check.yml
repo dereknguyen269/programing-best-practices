@@ -1,0 +1,69 @@
+name: Link Check
+
+# Fails a pull request when a Markdown link 404s, so broken resources never
+# reach master. Links that only bot-block (see scripts/link_check_config.json)
+# are reported but do not fail the build.
+
+on:
+  pull_request:
+    paths:
+      - "**/*.md"
+      - "scripts/validate_links.py"
+      - "scripts/link_check_config.json"
+      - ".github/workflows/link-check.yml"
+  push:
+    branches: [master]
+    paths:
+      - "**/*.md"
+      - "scripts/validate_links.py"
+      - "scripts/link_check_config.json"
+  schedule:
+    # Mondays 06:00 UTC, so rot in untouched links is caught even without commits.
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: link-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  link-check:
+    name: Validate Markdown links
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check links
+        run: python3 scripts/validate_links.py --json link-results.json --report failed_urls_report.md
+
+      - name: Summarise in job summary
+        if: always()
+        run: |
+          {
+            echo "## Link check"
+            echo
+            if [ -f failed_urls_report.md ]; then
+              sed -n '1,20p' failed_urls_report.md
+            else
+              echo "No report produced."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-check-results
+          path: |
+            link-results.json
+            failed_urls_report.md
+          if-no-files-found: warn
