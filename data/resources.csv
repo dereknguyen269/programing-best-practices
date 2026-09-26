@@ -1,0 +1,281 @@
+category,language_or_topic,title,url,org
+backend,C,C Programming Best Practices – Must know to become an Expert,https://data-flair.training/blogs/c-programming-best-practices/,
+backend,C,c-style,https://github.com/mcinglis/c-style,@mcinglis
+backend,C++,3 Coding Best Practices for C++,https://www.perforce.com/blog/qac/3-coding-best-practices-cpp,
+backend,C++,Collaborative Collection of C++ Best Practices,https://github.com/lefticus/cppbestpractices,@lefticus
+backend,C++,The C++ Core Guidelines,https://github.com/isocpp/CppCoreGuidelines,@isocpp
+backend,C++,C++ Best Practices (CppCon),https://cppcon.org/cpp-best-practices/,
+backend,C++,C++ Best Practices by Puppet Labs,https://github.com/puppetlabs/cppbestpractices,@puppetlabs
+backend,C++,Modern C++ Exception Handling,https://docs.microsoft.com/en-us/cpp/cpp/errors-and-exception-handling-modern-cpp,Microsoft
+backend,C++,Top Ten Tips for Correct C++ Coding,https://www.informit.com/articles/article.aspx?p=1712962,
+backend,Rust,Rust Style Guide,https://github.com/ubsan/style/blob/master/guide.md,@ubsan
+backend,Rust,Rust Design Patterns,https://rust-unofficial.github.io/patterns/,
+backend,Rust,Design Patterns in Rust,https://refactoring.guru/design-patterns/rust,Refactoring.Guru
+backend,Java,Google Java Style Guide,https://google.github.io/styleguide/javaguide.html,🏢 *Google
+backend,Java,Java Best Practices (Oracle),https://docs.oracle.com/javase/tutorial/java/javaOO/index.html,🏢 *Oracle Official
+backend,Java,Effective Java (Joshua Bloch),https://www.oreilly.com/library/view/effective-java-3rd/9780134686097/,🏢 *Industry Standard
+backend,Java,Java Coding Best Practices (Baeldung),https://www.baeldung.com/java-clean-code,@baeldung
+backend,Java,Java Best Practices Guide,https://howtodoinjava.com/java-best-practices/,
+backend,Java,Java Performance Tuning,https://docs.oracle.com/en/java/javase/21/performance/,🏢 *Oracle Official
+backend,Kotlin,Kotlin Coding Conventions,https://kotlinlang.org/docs/coding-conventions.html,🏢 *JetBrains Official
+backend,Kotlin,Kotlin Style Guide,https://github.com/yole/kotlin-style-guide,@yole
+backend,Kotlin,Kotlin Style Guide (Ray Wenderlich),https://github.com/raywenderlich/kotlin-style-guide,@raywenderlich
+backend,Scala,Scala Best Practices,https://github.com/alexandru/scala-best-practices,@alexandru
+backend,Scala,Databricks Scala Guide,https://github.com/databricks/scala-style-guide,@databricks
+backend,C#,C# Coding Best Practices – Conventions with Examples,https://www.freecodecamp.org/news/coding-best-practices-in-c-sharp/,
+backend,C#,22 C# Best Practices,https://code-maze.com/csharp-22-best-practices/,
+backend,Node.js,Node.js Best Practices,https://github.com/goldbergyoni/nodebestpractices,🏢 *@goldbergyoni (community standard)
+backend,Node.js,Node.js Security Best Practices,https://nodejs.org/en/learn/getting-started/security-best-practices,🏢 *Node.js Official
+backend,Node.js,Node.js Style Guide (Airbnb fork),https://github.com/airbnb/javascript,🏢 *Airbnb
+backend,Node.js,Node.js Performance Best Practices,https://nodejs.org/en/learn/getting-started/introduction-to-nodejs,🏢 *Node.js Official
+backend,Node.js,Express.js Best Practices (Official),https://expressjs.com/en/advanced/best-practice-performance.html,🏢 *Express Official
+backend,Node.js,RisingStack Node.js Style Guide,https://github.com/RisingStack/node-style-guide,@RisingStack
+backend,Python,PEP 8 – Style Guide for Python Code,https://peps.python.org/pep-0008/,🏢 *Python Official
+backend,Python,Google Python Style Guide,https://google.github.io/styleguide/pyguide.html,🏢 *Google
+backend,Python,Effective Python (Brett Slatkin),https://effectivepython.com/,
+backend,Python,Best of the Best Practices (BOBP) Guide,https://gist.github.com/sloria/7001839,@sloria
+backend,Python,The Hitchhiker's Guide to Python,https://docs.python-guide.org/,@kennethreitz
+backend,Python,Design Patterns in Python,https://refactoring.guru/design-patterns/python,🏢 *Refactoring.Guru
+backend,Python,Python Best Practices (Toptal),https://www.toptal.com/python/tips-and-practices,
+backend,Python,Python Anti-Patterns,https://docs.quantifiedcode.com/python-anti-patterns/,
+backend,Ruby,Ruby Style Guide,https://github.com/airbnb/ruby,@airbnb
+backend,Ruby,Ruby Tricks & Best Practices,https://github.com/franzejr/best-ruby,@franzejr
+backend,Ruby,Best Practice Patterns in Ruby,https://github.com/avdi/sbpprb,@avdi
+backend,Ruby,Ruby Best Practices (Gregory Brown),https://github.com/practicingruby/rbp-book,@practicingruby
+backend,Ruby,The Ruby Style Guide,https://github.com/bbatsov/ruby-style-guide,@bbatsov
+backend,Ruby,Shopify Ruby Style Guide,https://github.com/Shopify/ruby-style-guide,@Shopify
+backend,Ruby,53 Ruby on Rails Interview Questions,https://medium.com/ruby-daily/53-ruby-on-rails-interview-questions-and-answers-eb99eed1aeb7,
+backend,Ruby,Ruby Best Practices (Toptal),https://www.toptal.com/ruby/tips-and-practices,
+backend,Ruby,Ruby Best Practices for Beginners,https://deepsource.io/blog/ruby-dev-best-practices-for-beginners/,
+backend,Ruby,Ruby Timeouts Guide,https://github.com/ankane/the-ultimate-guide-to-ruby-timeouts,@ankane
+backend,Ruby,Design Patterns in Ruby,https://refactoring.guru/design-patterns/ruby,Refactoring.Guru
+backend,Ruby,Best Practices for Writing Ruby,https://reintech.io/blog/best-practices-for-writing-ruby,
+backend,Ruby,6 Ruby Best Practices for Beginners,https://www.codementor.io/ruby-on-rails/tutorial/6-ruby-best-practices-beginners-should-know,
+backend,Rails,Rails Style Guide,https://github.com/bbatsov/rails-style-guide,@bbatsov
+backend,Rails,rails_best_practices,https://github.com/flyerhzm/rails_best_practices,@flyerhzm
+backend,Rails,RSpec Style Guide,https://github.com/reachlocal/rspec-style-guide,@reachlocal
+backend,Rails,RSpec Best Practices,https://web.archive.org/web/2024/https://github.com/abinoda/rspec-best-practices,@abinoda
+backend,Rails,Rails Database Best Practices,https://web.archive.org/web/2024/https://blog.carbonfive.com/rails-database-best-practices/,
+backend,Rails,Active Record Query Optimization Tips,https://medium.com/@User3141592/active-record-query-performance-tips-a3c3947b968,
+backend,Rails,ActiveRecord SQL Query Optimization,https://phrase.com/blog/posts/activerecord-speed-up-your-sql-queries/,
+backend,Rails,Arel Cheatsheet,https://devhints.io/arel,
+backend,Rails,Production Rails,https://github.com/ankane/production_rails,@ankane
+backend,Rails,Securing Sensitive Data in Rails,https://ankane.org/sensitive-data-rails,@ankane
+backend,Rails,Toptal Rails Best Practices,https://www.toptal.com/ruby-on-rails/tips-and-practices,
+backend,PHP,PHP: The Right Way,https://github.com/codeguy/php-the-right-way,@codeguy
+backend,PHP,PHP Knowledge,https://github.com/php-earth/php-knowledge,@php-earth
+backend,PHP,PHP Coding Standards,https://github.com/maxdmyers/php-style-guide,@maxdmyers
+backend,Laravel,Laravel: The Right Way,https://github.com/laraveltherightway/laraveltherightway.github.io,@laraveltherightway
+backend,Laravel,Laravel Best Practices,https://github.com/uonick/laravel-best-practices,@uonick
+backend,NestJS,Best NestJS Practices and Advanced Techniques,https://dev.to/drbenzene/best-nestjs-practices-and-advanced-techniques-9m0,
+backend,NestJS,NestJS Official Documentation,https://docs.nestjs.com/,🏢 *NestJS Official
+backend,GraphQL,GraphQL Best Practices (Official),https://graphql.org/learn/best-practices/,🏢 *GraphQL Official
+backend,GraphQL,Production Ready GraphQL,https://book.productionreadygraphql.com/,
+backend,GraphQL,GraphQL Security Cheat Sheet (OWASP),https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html,🏢 *OWASP Official
+backend,GraphQL,Awesome GraphQL,https://github.com/chentsulin/awesome-graphql,@chentsulin
+backend,tRPC,tRPC Best Practices (Official),https://trpc.io/docs/server/routers,🏢 *tRPC Official
+backend,tRPC,tRPC React Query Integration,https://trpc.io/docs/client/react,🏢 *tRPC Official
+backend,tRPC,tRPC Security Best Practices,https://trpc.io/docs/server/merging-routers,🏢 *tRPC Official
+backend,Deno,Deno Best Practices (Official),https://docs.deno.com/,🏢 *Deno Official
+backend,Deno,Deno Style Guide,https://docs.deno.com/,🏢 *Deno Official
+backend,Deno,Deno Standard Library,https://jsr.io/@std,🏢 *Deno Official
+backend,Deno,Deno Security & Permissions,https://docs.deno.com/runtime/fundamentals/security/,🏢 *Deno Official
+backend,Bun,Bun Best Practices (Official),https://bun.sh/docs,🏢 *Bun Official
+backend,Bun,Bun Runtime Guide,https://bun.sh/docs/runtime,🏢 *Bun Official
+backend,Bun,Bun Package Manager,https://bun.sh/docs,🏢 *Bun Official
+backend,Bun,Bun Test Runner,https://bun.sh/docs/cli/test,🏢 *Bun Official
+backend,Elixir,The Elixir Style Guide,https://github.com/christopheradams/elixir_style_guide,@christopheradams
+backend,Elixir,Elixir Style Guide,https://github.com/lexmag/elixir-style-guide,@lexmag
+backend,Elixir,Credo's Elixir Style Guide,https://github.com/rrrene/elixir-style-guide,@rrrene
+backend,Elixir,10 Killer Elixir Tips #1,https://medium.com/blackode/10-killer-elixir-tips-2a9be1bec9be,
+backend,Elixir,10 Killer Elixir Tips #2,https://medium.com/blackode/10-killer-elixir-tips-2-c5f87f8a70c8,
+backend,Elixir,10 Killer Elixir Tips #3,https://medium.com/blackode/10-killer-elixir-tips-3-5c196eaec376,
+backend,Elixir,Elixir Cheatsheet,https://devhints.io/elixir,
+backend,Elixir,Elixir Metaprogramming Cheatsheet,https://devhints.io/elixir-metaprogramming,
+backend,Go (Golang),Uber Go Style Guide,https://github.com/uber-go/guide/blob/master/style.md,@uber-go
+backend,Go (Golang),Go Best Practices,https://github.com/mehrdadrad/GoBestPractices,@mehrdadrad
+backend,Go (Golang),Go Style Guide,https://github.com/AgtLucas/go-style-guide,@AgtLucas
+backend,Go (Golang),Golang Tutorial Series,https://golangbot.com/learn-golang-series/,
+backend,Go (Golang),Go Cheat Sheet,https://github.com/a8m/golang-cheat-sheet,@a8m
+backend,Go (Golang),Soham Kamani – Golang,https://www.sohamkamani.com/golang/,
+backend,Go (Golang),Design Patterns in Go,https://refactoring.guru/design-patterns/go,Refactoring.Guru
+backend,Swift,Swift Style Guide (Eure),https://github.com/eure/swift-style-guide,@eure
+backend,Swift,Design Patterns in Swift,https://github.com/ochococo/Design-Patterns-In-Swift,@ochococo
+backend,Swift,Swift Style Guide (Ray Wenderlich),https://github.com/raywenderlich/swift-style-guide,@raywenderlich
+backend,Objective-C,NYTimes Objective-C Style Guide,https://github.com/NYTimes/objective-c-style-guide,@NYTimes
+backend,Objective-C,Objective-C Style Guide (Ray Wenderlich),https://github.com/raywenderlich/objective-c-style-guide,@raywenderlich
+backend,Objective-C,GitHub Objective-C Style Guide,https://github.com/github/objective-c-style-guide,@github
+backend,Objective-C,Code Style & Best Practices for Objective-C,https://github.com/wangshengjia/-Code-Style---Best-Practise-for-Objective-C,@wangshengjia
+backend,Perl,Effective Perl Programming: Idiomatic Perl,https://www.effectiveperlprogramming.com/,
+backend,Perl,Perl Style Guide,https://perldoc.perl.org/perlstyle,Perl.org
+backend,Lua,Lua Best Practices (Lua.org),https://www.lua.org/gems/sample.pdf,
+backend,Lua,Lua Style Guide,http://lua-users.org/wiki/LuaStyleGuide,
+frontend,HTML,HTML Best Practices,https://github.com/hail2u/html-best-practices,@hail2u
+frontend,HTML,HTML5 (and Some CSS) Best Practice,https://web.archive.org/web/2024/https://www.codeproject.com/Tips/666578/HTML-and-Some-CSS-Best-Practice,
+frontend,HTML,Frontend Guidelines,https://github.com/bendc/frontend-guidelines,@bendc
+frontend,HTML,Google HTML Style Guide,https://google.github.io/styleguide/htmlcssguide.html#HTML,@google
+frontend,CSS,Airbnb CSS / Sass Styleguide,https://github.com/airbnb/css,@airbnb
+frontend,CSS,Dropbox (S)CSS Style Guide,https://github.com/dropbox/css-style-guide,@dropbox
+frontend,CSS,CSS Coding Standards & Best Practices,https://github.com/stevekwan/best-practices/blob/master/css/best-practices.md,@stevekwan
+frontend,CSS,Google CSS Style Guide,https://google.github.io/styleguide/htmlcssguide.html#CSS,@google
+frontend,SASS,Sass Coding Guidelines,https://github.com/bigcommerce/sass-style-guide,@bigcommerce
+frontend,SASS,Sass-Guidelines,https://github.com/blackfalcon/Sass-Guidlines/blob/master/SASS-Guidelines.md,@blackfalcon
+frontend,SASS,Sass-lang Style Rules,https://sass-lang.com/documentation/style-rules,
+frontend,JavaScript,Airbnb JavaScript Style Guide,https://github.com/airbnb/javascript,@airbnb
+frontend,JavaScript,ES6 Cheatsheet,https://github.com/DrkSephy/es6-cheatsheet,@DrkSephy
+frontend,JavaScript,"Common JavaScript ""Gotchas""",https://github.com/stevekwan/best-practices/blob/master/javascript/gotchas.md,@stevekwan
+frontend,JavaScript,Pragmatic JavaScript Standards,https://github.com/stevekwan/best-practices/blob/master/javascript/best-practices.md,@stevekwan
+frontend,JavaScript,JavaScript 规范,https://github.com/adamlu/javascript-style-guide,@adamlu
+frontend,JavaScript,Google JavaScript Style Guide,https://google.github.io/styleguide/jsguide.html,@google
+frontend,JavaScript,JavaScript The Right Way,https://github.com/braziljs/js-the-right-way,@braziljs
+frontend,JavaScript,MDN JavaScript Guidelines,https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines/JavaScript,@mozilla
+frontend,JavaScript,W3C JavaScript Best Practices,https://www.w3.org/wiki/JavaScript_best_practices,@w3c
+frontend,JavaScript,Clean Code JavaScript,https://github.com/ryanmcdermott/clean-code-javascript,@ryanmcdermott
+frontend,TypeScript,TypeScript Best Practices,https://github.com/BestCoderDotInfo/TypeScript-best-practices,@BestCoderDotInfo
+frontend,TypeScript,TypeScript Do's and Don'ts,https://www.typescriptlang.org/docs/handbook/declaration-files/do-s-and-don-ts.html,TypeScript Official
+frontend,TypeScript,Clean Code TypeScript,https://github.com/labs42io/clean-code-typescript,@labs42io
+frontend,TypeScript,TypeScript Style Guide (Google),https://google.github.io/styleguide/tsguide.html,@google
+frontend,ReactJS,Advanced ReactJS Patterns,https://github.com/kentcdodds/advanced-react-patterns-v2,@kentcdodds
+frontend,ReactJS,React Interview Questions & Answers,https://github.com/sudheerj/reactjs-interview-questions,@sudheerj
+frontend,ReactJS,React Best Practices (Airbnb),https://github.com/airbnb/javascript/tree/master/react,@airbnb
+frontend,ReactJS,React Patterns,https://reactpatterns.com/,@chantastic
+frontend,ReactJS,React TypeScript Cheatsheet,https://github.com/typescript-cheatsheets/react,@typescript-cheatsheets
+frontend,ReactJS,Bulletproof React,https://github.com/alan2207/bulletproof-react,@alan2207
+frontend,React Native,React Native Guide,https://github.com/reactnativecn/react-native-guide,@reactnativecn
+frontend,Vue,Vue.js Style Guide (Official),https://vuejs.org/style-guide/,🏢 *Vue.js Official
+frontend,Vue,Vue 3 Best Practices (Official),https://vuejs.org/guide/best-practices/performance.html,🏢 *Vue.js Official
+frontend,Vue,Vue 3 Composition API Guide,https://vuejs.org/guide/extras/composition-api-faq,🏢 *Vue.js Official
+frontend,Vue,Vue.js Best Practices,https://learnvue.co/articles/vue-best-practices,
+frontend,Vue,10 Good Practices for Large Vue.js Projects,https://www.telerik.com/blogs/10-good-practices-building-maintaining-large-vuejs-projects,
+frontend,Vue,Vue Best Practices (Awesome Vue),https://github.com/vuejs/awesome-vue,@vuejs
+frontend,Angular,Angular Style Guide (Official),https://angular.dev/style-guide,🏢 *Angular Official
+frontend,Angular,Angular Coding Style Guide,https://angular.dev/guide/styleguide,🏢 *Angular Official
+frontend,Angular,Angular Best Practices for Enterprise Apps,https://www.angulararchitects.io/en/blog/,angular architects
+frontend,Angular,Angular Performance Checklist,https://github.com/mgechev/angular-performance-checklist,@mgechev
+frontend,Next.js,Best Practices for Clean React/Next.js Projects,https://blogs.perficient.com/2023/04/25/best-practices-for-building-and-sustaining-a-clean-react-next-js-project/,
+frontend,Next.js,10 Tips for Optimal Next.js Performance,https://www.fronttribe.com/stories/next-js-best-practices-10-tips-for-optimal-performance,
+frontend,Next.js,Best Practices to Increase Next.js Speed,https://stackoverflow.blog/2022/12/20/best-practices-to-increase-the-speed-for-next-js-apps/,
+frontend,Nuxt,Nuxt Style Guide (Official),https://nuxt.com/docs,🏢 *Nuxt Official
+frontend,Nuxt,10 Nuxt Best Practices,https://climbtheladder.com/10-nuxt-best-practices/,
+frontend,Nuxt,Nuxt Best Practices & Tutorials,https://masteringnuxt.com/blog,
+frontend,Svelte,Svelte Best Practices (Official),https://svelte.dev/docs,🏢 *Svelte Official
+frontend,Svelte,Svelte Style Guide,https://svelte.dev/docs/svelte/typescript,🏢 *Svelte Official
+frontend,Svelte,SvelteKit Best Practices (Official),https://svelte.dev/docs,🏢 *SvelteKit Official
+frontend,Svelte,Rules of Svelte,https://svelte.dev/docs,🏢 *Svelte Official
+frontend,Svelte,Svelte Performance,https://svelte.dev/docs,🏢 *Svelte Official
+frontend,Solid.js,Solid.js Best Practices (Official),https://docs.solidjs.com/,🏢 *SolidJS Official
+frontend,Solid.js,Solid.js Style Guide,https://docs.solidjs.com/,🏢 *SolidJS Official
+frontend,Solid.js,SolidStart Best Practices,https://docs.solidjs.com/,🏢 *SolidJS Official
+frontend,Frontend Performance,Frontend Performance Best Practices (Roadmap.sh),https://roadmap.sh/best-practices/frontend-performance,
+frontend,Frontend Performance,Web Vitals Best Practices (Google),https://web.dev/vitals/,
+frontend,Frontend Performance,High Performance Web Apps (MDN),https://developer.mozilla.org/en-US/docs/Learn/Performance,
+database,SQL,SQL Style Guide,https://www.sqlstyle.guide,
+database,SQL,Best Practices for Writing SQL Queries,https://www.metabase.com/learn/sql-questions/sql-best-practices,
+database,SQL,SQL Performance Explained (Markus Winand),https://use-the-index-luke.com/,
+database,SQL,GitLab SQL Style Guide,https://about.gitlab.com/handbook/business-technology/data-team/platform/sql-style-guide/,
+database,PostgreSQL,PostgreSQL Performance Best Practices,https://www.adservio.fr/post/postgresql-performance-best-practices,
+database,PostgreSQL,Best Practices for PostgreSQL Database,https://www.e2enetworks.com/blog/best-practices-for-postgresql-database,
+database,PostgreSQL,"Run ANALYZE, Run ANALYZE, Run ANALYZE",https://ottertune.com/blog/run-postgresql-analyze-to-fix-a-slowdow-in-db/,
+database,PostgreSQL,Best Practices for Designing PostgreSQL Databases,https://appmaster.io/blog/best-practices-for-designing-postgresql-databases,
+database,MySQL,MySQL Performance Best Practices,https://dev.mysql.com/doc/refman/8.0/en/optimization.html,
+database,MySQL,MySQL Security Best Practices,https://dev.mysql.com/doc/refman/8.0/en/security-guidelines.html,
+database,NoSQL,10 NoSQL Data Modeling Best Practices,https://climbtheladder.com/10-nosql-data-modeling-best-practices/,
+database,NoSQL,MongoDB Schema Design Best Practices,https://www.mongodb.com/developer/products/mongodb/mongodb-schema-design-best-practices/,
+database,NoSQL,11 MongoDB Security Features & Best Practices,https://satoricyber.com/mongodb-security/11-mongodb-security-features-and-best-practices/,
+database,Prisma,Prisma Best Practices (Official),https://www.prisma.io/docs/orm/prisma-client/queries/crud,🏢 *Prisma Official
+database,Prisma,Prisma Data Modeling Guide,https://www.prisma.io/docs/orm/prisma-schema/data-model,🏢 *Prisma Official
+database,Prisma,Prisma Performance Optimization,https://www.prisma.io/docs/orm/prisma-client/queries/query-optimization-performance,🏢 *Prisma Official
+database,Prisma,Prisma Security Best Practices,https://www.prisma.io/docs/orm/prisma-client/deployment,🏢 *Prisma Official
+database,Drizzle ORM,Drizzle ORM Best Practices (Official),https://orm.drizzle.team/docs/guides,🏢 *Drizzle Official
+database,Drizzle ORM,Drizzle Schema Design,https://orm.drizzle.team/docs/sql-schema-declaration,🏢 *Drizzle Official
+database,Drizzle ORM,Drizzle Relations & Joins,https://orm.drizzle.team/docs/rqb,🏢 *Drizzle Official
+database,Drizzle ORM,Drizzle Production Deployment,https://orm.drizzle.team/docs/migrations,🏢 *Drizzle Official
+mobile,Flutter,Performance Best Practices,https://flutter.dev/docs/perf/rendering/best-practices,
+mobile,Flutter,Flutter: Best Practices and Tips,https://medium.com/flutter-community/flutter-best-practices-and-tips-7c2782c9ebb5,Kinjal Dhamat
+mobile,Flutter,Flutter Development Best Practices,https://heartbeat.fritz.ai/flutter-development-best-practices-3e162765340a,Derrick Mwiti
+mobile,Dart,Dart & Flutter Best Practices,https://lazebny.io/flutter-best-practices/,
+mobile,Dart,Performance Best Practices,https://docs.flutter.dev/perf/best-practices,
+mobile,Dart,Writing Clean Code in Dart: Best Practices & Design Patterns,https://clouddevs.com/dart/clean-code/,
+devops,AWS,AWS Best Practices (Roadmap.sh),https://roadmap.sh/best-practices/aws,
+devops,AWS,AWS Well-Architected Framework,https://aws.amazon.com/architecture/well-architected/,
+devops,Microservices & Cloud-Native,12 Factors for Building Cloud-Native Apps,https://12factor.net/,🏢 *Standard
+devops,Microservices & Cloud-Native,Microservices Best Practices (Microsoft),https://learn.microsoft.com/en-us/azure/architecture/microservices/,🏢 *Microsoft
+devops,Microservices & Cloud-Native,Microservices Patterns (Chris Richardson),https://microservices.io/patterns/index.html,🏢 *@crichardson
+devops,Microservices & Cloud-Native,Cloud-Native Patterns (CNCF),https://github.com/cncf/presentations,🏢 *CNCF
+devops,Microservices & Cloud-Native,The Twelve-Factor App,https://12factor.net/,@heroku
+devops,Docker,Docker Best Practices (Official),https://docs.docker.com/develop/develop-images/dockerfile_best-practices/,Docker Official
+devops,Docker,Docker Security Best Practices,https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html,OWASP
+devops,Docker,Docker & Kubernetes Best Practices (Google),https://cloud.google.com/architecture/best-practices-for-building-containers,@google
+devops,Docker,Awesome Docker,https://github.com/veggiemonk/awesome-docker,@veggiemonk
+devops,Kubernetes,Kubernetes Best Practices (Google),https://cloud.google.com/blog/products/containers-kubernetes/your-guide-kubernetes-best-practices,@google
+devops,Kubernetes,Kubernetes Production Best Practices,https://learnk8s.io/production-best-practices,learnk8s
+devops,Kubernetes,Kubernetes Security Best Practices,https://kubernetes.io/docs/concepts/security/security-checklist/,Kubernetes Official
+devops,Kubernetes,Awesome Kubernetes,https://github.com/ramitsurana/awesome-kubernetes,@ramitsurana
+devops,API Security,API Security Best Practices (Roadmap.sh),https://roadmap.sh/best-practices/api-security,🏢 *Roadmap.sh
+devops,API Security,API Security Checklist,https://github.com/shieldfy/API-Security-Checklist,@shieldfy
+devops,API Security,OWASP API Security Top 10,https://owasp.org/API-Security/editions/2023/en/0x00-header/,🏢 *OWASP
+devops,API Security,JWT Best Practices (Auth0),https://auth0.com/blog/ten-things-you-should-know-about-tokens-and-cookies/,🏢 *Auth0
+devops,API Security,REST API Security Best Practices (Microsoft),https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design,🏢 *Microsoft
+devops,DevSecOps & Security,OWASP Top 10 (2024),https://owasp.org/www-project-top-ten/,
+devops,DevSecOps & Security,Zero Trust Security Model,https://www.microsoft.com/security/blog/zero-trust/,
+devops,DevSecOps & Security,Best Practices for Secure CI/CD,https://snyk.io/learn/devsecops/,
+ai-ml,AI/ML Engineering,MLOps Best Practices (Google Cloud),https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning,🏢 *Google Cloud
+ai-ml,AI/ML Engineering,Responsible AI Practices (Google),https://ai.google/responsibilities/responsible-ai-practices/,🏢 *Google
+ai-ml,AI/ML Engineering,Anthropic Prompt Engineering Guide,https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview,🏢 *Anthropic Official
+ai-ml,AI/ML Engineering,OpenAI Prompt Engineering Guide,https://platform.openai.com/docs/guides/prompt-engineering,🏢 *OpenAI Official
+ai-ml,AI/ML Engineering,LLM Application Best Practices (Anthropic),https://docs.anthropic.com/en/docs/build-with-claude,🏢 *Anthropic Official
+ai-ml,AI/ML Engineering,IBM Data Science – Best Practices,https://github.com/IBM/data-science-best-practices,@IBM
+ai-ml,AI/ML Engineering,ETL Best Practices with Airflow,https://github.com/gtoonstra/etl-with-airflow,@gtoonstra
+ai-ml,AI/ML Engineering,dbt Best Practices Guide,https://docs.getdbt.com/guides/best-practices,🏢 *dbt Official
+ai-ml,AI/ML Engineering,Structuring AI Agents (Anthropic),https://docs.anthropic.com/en/docs/build-with-claude,🏢 *Anthropic Official
+ai-ml,AI/ML Engineering,Evaluation for LLM Apps (LangSmith),https://docs.smith.langchain.com/evaluation,LangChain
+ai-ml,AI/ML Engineering,LLM Security (OWASP Top 10 for LLM),https://genai.owasp.org/,🏢 *OWASP
+ai-ml,AI/ML Engineering,Effective AI Pair Programming (GitHub Copilot),https://github.com/features/copilot,🏢 *GitHub/Microsoft
+ai-ml,AI/ML Engineering,Cursor AI Best Practices,https://docs.cursor.com/get-started/best-practices,🏢 *Cursor Official
+ai-ml,AI/ML Engineering,Claude Code Best Practices,https://docs.anthropic.com/en/docs/claude-code,🏢 *Anthropic Official
+ai-ml,AI/ML Engineering,DevOps with AI Agents,https://docs.anthropic.com/en/docs/agents-and-tools,🏢 *Anthropic Official
+ai-ml,AI/ML Engineering,Awesome AI Tools,https://github.com/mahseema/awesome-ai-tools,@mahseema
+ai-ml,AI/ML Engineering,Best Practices for Coding with AI,https://blog.codacy.com/best-practices-for-coding-with-ai,
+ai-ml,AI/ML Engineering,The Do's and Don'ts of Using AI in Software Development,https://www.kodeco.com/41989083-the-do-s-and-don-ts-of-using-ai-in-software-development,
+ai-ml,AI/ML Engineering,10 Best Practices for Secure AI Development,https://snyk.io/blog/10-best-practices-for-securely-developing-with-ai/,
+ai-ml,AI/ML Engineering,Exploring Generative AI,https://martinfowler.com/articles/exploring-gen-ai.html,@martinfowler
+ai-ml,AI/ML Engineering,AI Coding Guidelines (Google),https://google.github.io/styleguide/,🏢 *Google
+tools,Code Review,Code Review Best Practices (Roadmap.sh),https://roadmap.sh/best-practices/code-review,
+tools,Code Review,Google Code Review Developer Guide,https://google.github.io/eng-practices/review/,@google
+tools,Code Review,Code Review Best Practices (Palantir),https://github.com/palantir/gradle-baseline/blob/develop/docs/best-practices/code-reviews/readme.md,@palantir
+tools,Git,Git Best Practices (Seth Robertson),https://sethrobertson.github.io/GitBestPractices/,
+tools,Git,Conventional Commits,https://www.conventionalcommits.org/,Conventional Commits
+tools,Git,Git Flow,https://nvie.com/posts/a-successful-git-branching-model/,@nvie
+tools,Git,GitHub Flow,https://docs.github.com/en/get-started/using-github/github-flow,GitHub Official
+tools,Git,Trunk Based Development,https://trunkbaseddevelopment.com/,
+tools,Team & Collaboration,Remote Engineering Best Practices,https://about.gitlab.com/company/culture/all-remote/,
+tools,Team & Collaboration,Agile Development Best Practices,https://www.atlassian.com/agile,
+tools,Team & Collaboration,Effective Pair Programming,https://martinfowler.com/articles/on-pair-programming.html,
+tools,Bash Script,Bash Best Practices,https://bertvv.github.io/cheat-sheets/Bash.html,
+tools,Bash Script,progrium/bashstyle,https://github.com/progrium/bashstyle,
+tools,Bash Script,Best Practices for Bash Scripts,https://hyperskill.org/learn/step/19230,
+tools,Bash Script,Shell Style Guide (Google),https://google.github.io/styleguide/shellguide.html,🏢 *Google Official
+tools,Biome,Biome Getting Started,https://biomejs.dev/guides/getting-started/,🏢 *Biome Official
+tools,Biome,Biome Configuration Guide,https://biomejs.dev/reference/configuration/,🏢 *Biome Official
+tools,Biome,Biome Linter Rules,https://biomejs.dev/linter/,🏢 *Biome Official
+tools,Biome,Biome vs ESLint/Prettier Migration,https://biomejs.dev/guides/migrate-eslint-prettier/,🏢 *Biome Official
+tools,Turborepo,Turborepo Getting Started,https://turbo.build/repo/docs,🏢 *Vercel Official
+tools,Turborepo,Turborepo Configuration Guide,https://turbo.build/repo/docs/reference/configuration,🏢 *Vercel Official
+tools,Turborepo,Turborepo Remote Caching,https://turbo.build/repo/docs/core-concepts/remote-caching,🏢 *Vercel Official
+tools,Turborepo,Migrating to Turborepo,https://turborepo.com/docs/guides/migrating-from-nx,🏢 *Vercel Official
+tools,Nx,Nx Getting Started,https://nx.dev/getting-started/intro,🏢 *Nx Official
+tools,Nx,Nx Best Practices Guide,https://nx.dev/recipes/enforce-module-boundaries,🏢 *Nx Official
+tools,Nx,Nx Monorepo Patterns,https://nx.dev/concepts/decisions/overview,🏢 *Nx Official
+tools,Nx,Nx vs Turborepo Trade-offs,https://nx.dev/docs/kb/nx-vs-turborepo,🏢 *Nx Official
+tools,General Testing,JavaScript Testing Best Practices,https://github.com/goldbergyoni/javascript-testing-best-practices,@goldbergyoni
+tools,General Testing,Unit Testing Best Practices (Microsoft),https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices,Microsoft
+tools,General Testing,The Art of Unit Testing,https://www.artofunittesting.com/,
+tools,General Testing,Testing Best Practices (Martin Fowler),https://martinfowler.com/testing/,@martinfowler
+tools,General Testing,Test-Driven Development (TDD) Guide,https://testdriven.io/test-driven-development/,testdriven.io
+tools,System Design,System Design 101,https://github.com/ByteByteGoHq/system-design-101#system-design-101,@ByteByteGoHq
+tools,Performance & Scalability,Scaling Applications (Netflix Tech Blog),https://netflixtechblog.com/,
+backend,R,Beyond Basic R – Introduction & Best Practices,https://waterdata.usgs.gov/blog/intro-best-practices/,
+backend,R,R Code – Best Practices,https://www.r-bloggers.com/r-code-best-practices/,
+backend,R,Best Practices for Writing R Code,https://swcarpentry.github.io/r-novice-inflammation/06-best-practices-R.html,@swcarpentry
+backend,R,R Coding Style Best Practices,https://www.datanovia.com/en/blog/r-coding-style-best-practices/,
+backend,R,Good Practices in R Programming (ETH Zürich),https://stat.ethz.ch/Teaching/maechler/R/useR_2014/Maechler-2014-pr.pdf,

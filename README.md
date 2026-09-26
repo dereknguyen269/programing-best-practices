@@ -1,3 +1,4 @@
+<a id="top"></a>
 <h1 align="center">🌟 Programming Best Practices</h1>
 
 <p align="center">
@@ -8,15 +9,16 @@
 </p>
 
 <div align="center">
-    <img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome Badge"/>
+    <a href="https://github.com/sindresorhus/awesome"><img src="https://awesome.re/badge.svg" alt="Awesome"/></a>
     <img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=flat&color=BC4E99" alt="Star Badge"/>
     <img alt="GitHub issues" src="https://img.shields.io/github/issues/dereknguyen269/programing-best-practices" />
     <img alt="GitHub stars" src="https://img.shields.io/github/stars/dereknguyen269/programing-best-practices" />
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/dereknguyen269/programing-best-practices" />
     <img alt="Github license" src="https://img.shields.io/github/license/dereknguyen269/programing-best-practices" />
 </div>
 
 <div align="center">
-    <h3>🔗 Quick Links</h3>
+    <h3 id="quick-links">🔗 Quick Links</h3>
     <a href="#-backend-development">Backend</a> •
     <a href="#-frontend-development">Frontend</a> •
     <a href="#️-database--data">Database</a> •
@@ -40,6 +42,16 @@ The focus is primarily on **Web Development** (Ruby, Rails, JavaScript, etc.), b
 
 With this collection, I hope to support developers in writing **cleaner, more maintainable code** and growing in their careers.
 
+### ✨ At a Glance
+
+| | |
+|---|---|
+| 📚 **Resources** | 340+ hand-picked guides, style guides, and official docs |
+| 💻 **Coverage** | 30+ languages & frameworks across backend, frontend, mobile, data, DevOps, and AI |
+| 🔍 **Offline search** | Crawl everything locally and search with BM25 — no browser tab-sprawl |
+| 🤖 **AI-native** | Auto-invoked skills for Claude Code and Kiro, plus a Claude Code plugin |
+| 🔄 **Maintained** | Automated link checking with weekly fix PRs |
+
 **Status:** 🚧 *Work in Progress — continuously updated*
 
 ---
@@ -55,127 +67,19 @@ With this collection, I hope to support developers in writing **cleaner, more ma
 
 ---
 
-## 🚀 Quick Start Setup
-
-### 🎯 Automated Setup (Recommended)
-
-The fastest way to get started is using our automated setup script:
-
-```bash
-# Clone the repository
-git clone https://github.com/dereknguyen269/programing-best-practices.git
-cd programing-best-practices
-
-# Run the interactive setup script
-./scripts/quick-start.sh
-```
-
-The script will guide you through different setup options:
-
-| Mode | Time | What's Included |
-|------|------|-----------------|
-| **Minimal** | ~1 min | Dependencies only, no crawling |
-| **Test** | ~2-3 min | Dependencies + 20 sample resources |
-| **Full** | ~10-15 min | Everything + all 150+ resources + AI summaries |
-| **Custom** | Varies | Choose specific categories to crawl |
-
-**Quick Options:**
-
-```bash
-# Minimal setup (just dependencies)
-./scripts/quick-start.sh --minimal
-
-# Full setup (everything)
-./scripts/quick-start.sh --full
-
-# Test with 20 resources
-./scripts/quick-start.sh --limit 20
-
-# Crawl only Python resources
-./scripts/quick-start.sh --category python
-```
-
-
----
-
-### 📋 Manual Setup (Alternative)
-
-Prefer to set up manually? Follow these steps:
-
-#### Step 1: Clone the Repository
-
-```bash
-git clone https://github.com/dereknguyen269/programing-best-practices.git
-cd programing-best-practices
-```
-
-#### Step 2: Install Crawler Dependencies (Optional but Recommended)
-
-The crawler downloads all external resources locally for offline access:
-
-```bash
-# Create virtual environment (recommended)
-python3 -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-
-# Install dependencies
-pip install -r scripts/crawler/requirements.txt
-```
-
-#### Step 3: Crawl Resources (Optional)
-
-Download all best practices content locally:
-
-> **Note**: Make sure your virtual environment is activated before running these commands:
-> ```bash
-> source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-> ```
-> 
-> Or use the venv Python directly: `.venv/bin/python3` instead of `python3`
-
-```bash
-# Crawl all resources (~150+ links, takes 10-15 minutes)
-python3 scripts/crawler/crawl.py
-
-# Or crawl specific categories
-python3 scripts/crawler/crawl.py --category python
-python3 scripts/crawler/crawl.py --category javascript
-
-# Or crawl a limited number for testing
-python3 scripts/crawler/crawl.py --limit 20
-
-# Update existing content
-python3 scripts/crawler/crawl.py --update
-```
-
-#### Step 4: Generate AI Summaries (Optional)
-
-Create condensed summaries optimized for AI assistants:
-
-```bash
-python3 scripts/crawler/generate_summaries.py
-```
-
-#### Step 5: Use with Your AI Coding Editor
-
-The repository is now ready! Your AI coding editor will automatically detect:
-
-| AI Editor | Config File | Auto-Detected |
-|-----------|-------------|---------------|
-| **Claude Code** | `skills/best-practices/` | ✅ |
-| **Kiro** | `.kiro/steering/best-practices/` | ✅ |
+> 💡 **Want offline access, local search, or AI-editor integration?** Jump to [🚀 Quick Start Setup](#-quick-start-setup) at the bottom.
 
 ---
 
 ## 📁 Repository Structure
 
-After setup, your repository will look like:
-
 ```
 programing-best-practices/
 ├── README.md                   # Main knowledge base (curated links)
 ├── index.html                  # Web landing page
+├── contributing.md             # Contribution guidelines
 ├── .claude-plugin/             # 🔌 Claude Code plugin manifest
+│   ├── marketplace.json
 │   └── plugin.json
 ├── skills/                     # 🧠 Claude Code auto-invoked skills
 │   └── best-practices/         # 🔍 BM25-powered best practices search
@@ -184,9 +88,13 @@ programing-best-practices/
 │       └── scripts/            # Search engine (core.py, search.py, generate_csv.py)
 ├── .kiro/                      # Kiro config
 │   ├── project.md
-│   └── steering/               # Kiro steering files (auto-included)
-│       └── best-practices/     # 🔍 BM25-powered search
-├── content/                    # 📄 Crawled content (after running crawler)
+│   ├── steering/               # Kiro steering files (auto-included)
+│   │   ├── best-practices/     # 🔍 BM25-powered search
+│   │   └── ui-ux-pro-max/      # 🎨 UI/UX guidance skill
+│   └── resources/              # Project knowledge (decisions, progress)
+├── data/
+│   └── resources.csv           # 📊 Resource index (regenerated by crawler)
+├── content/                    # 📄 Crawled content (generated — not committed)
 │   ├── index.json              # Master index of all resources
 │   ├── metadata.yaml           # Crawl statistics
 │   └── ...                     # Content organized by category
@@ -196,13 +104,21 @@ programing-best-practices/
 │   │   ├── search.py           # Search tool
 │   │   ├── generate_summaries.py
 │   │   └── requirements.txt
+│   ├── validate_links.py       # ✅ Link health checker
+│   ├── fix_links.py            # 🔧 Automated link fixer
+│   ├── auto_maintenance_pr.sh  # 🤖 Weekly maintenance PR automation
 │   ├── install-skill.py        # 🔧 Install skill to any project (Claude/Kiro)
 │   ├── update.sh               # 🔄 Update resources + reinstall skill
 │   ├── setup-kb.sh             # ⚡ Integrate KB into an existing project
 │   └── quick-start.sh          # 🚀 First-time setup for this repo
 └── docs/
-    └── INTEGRATION.md          # Integration guide
+    ├── INTEGRATION.md          # Integration guide
+    ├── QUICK_START_GUIDE.md    # Setup script walkthrough
+    ├── backend.md / frontend.md / database.md / devops.md / mobile.md / ai-ml.md / tools.md
+    └── images/                 # Diagrams and screenshots
 ```
+
+> `content/` is generated locally by the crawler and intentionally git-ignored — clone the repo and run the setup script to create it.
 
 ---
 
@@ -247,6 +163,33 @@ python3 .kiro/steering/best-practices/scripts/search.py "design patterns" --cont
 
 # Regenerate CSVs and reinstall without re-crawling
 ./scripts/update.sh --skip-crawl
+```
+
+### 🛠️ Troubleshooting
+
+| Problem | Fix |
+|---------|-----|
+| `python3: command not found` | Install Python 3.8+ and re-run the setup script |
+| `source .venv/bin/activate` fails on Windows | Use `.venv\Scripts\activate` instead |
+| Crawl is slow or times out | Try `--limit 20` first, or crawl one category: `--category python` |
+| Skill not detected by your AI editor | Re-run `./scripts/update.sh --skip-crawl` to reinstall, then restart the editor |
+| Found a broken link | Please [open an issue](https://github.com/dereknguyen269/programing-best-practices/issues) — link health is checked automatically (see below) |
+
+### 🔄 Maintenance & Link Health
+
+With 340+ external links, rot is inevitable — so it's automated:
+
+- **Validation** — `scripts/validate_links.py` checks every link in the README
+- **Auto-fix** — `scripts/fix_links.py` repairs known patterns (e.g., moved or archived URLs)
+- **Weekly PRs** — `scripts/auto_maintenance_pr.sh` opens a maintenance pull request with link fixes
+- **Log** — `maintenance_log.txt` records each maintenance run
+
+```bash
+# Check all links yourself
+python3 scripts/validate_links.py
+
+# Attempt automatic fixes
+python3 scripts/fix_links.py
 ```
 
 ---
@@ -322,7 +265,7 @@ The plugin includes a skill that Claude invokes automatically:
 Install the BM25-powered best practices skill directly into any project. The installer automatically crawls content, generates searchable CSV databases, and copies the skill:
 
 ```bash
-# Full install — crawl all 150+ resources + generate CSVs + install skill
+# Full install — crawl all 340+ resources + generate CSVs + install skill
 python3 scripts/install-skill.py ~/Projects/my-app --mode both
 
 # Install as Claude Code skill only
@@ -346,7 +289,7 @@ The installer runs a 4-step pipeline:
 | Step | What It Does | Time |
 |------|-------------|------|
 | **1. Dependencies** | Installs crawler requirements (requests, beautifulsoup4, etc.) | ~10s |
-| **2. Crawl** | Fetches 150+ resources from README.md links | ~2-10 min |
+| **2. Crawl** | Fetches 340+ resources from README.md links | ~2-10 min |
 | **3. Generate CSVs** | Builds BM25-searchable databases (resources, languages, categories) | ~5s |
 | **4. Install** | Copies skill with correct paths to target project | ~1s |
 
@@ -390,127 +333,122 @@ Here are some standout resources that every developer should know:
 
 ## 📂 Table of Contents
 
-### 🔹 Backend Development
+**🔹 Backend Development**
 
-#### Systems Programming
-* [C](#c-best-practices)
-* [C++](#c-best-practices-1)
-* [Rust](#rust-best-practices)
+**Systems Programming**
+* [C](#-c-best-practices)
+* [C++](#-c-best-practices-1)
+* [Rust](#-rust-best-practices)
 
-#### Enterprise & JVM Languages
-* [Java](#java-best-practices)
-* [Kotlin](#kotlin-best-practices)
-* [Scala](#scala-best-practices)
-* [C#](#c-best-practices-2)
+**Enterprise & JVM Languages**
+* [Java](#-java-best-practices)
+* [Kotlin](#-kotlin-best-practices)
+* [Scala](#-scala-best-practices)
+* [C#](#-c-best-practices-2)
 
-#### Web Backend
-* [Node.js](#nodejs-best-practices)
-* [Python](#python-best-practices)
-* [Ruby](#ruby-best-practices)
-* [Rails](#rails-best-practices)
-* [PHP](#php-best-practices)
-* [Laravel](#laravel-best-practices)
-* [NestJS](#nestjs-best-practices)
+**Web Backend**
+* [Node.js](#-nodejs-best-practices)
+* [Python](#-python-best-practices)
+* [Ruby](#-ruby-best-practices)
+* [Rails](#-rails-best-practices)
+* [PHP](#-php-best-practices)
+* [Laravel](#-laravel-best-practices)
+* [NestJS](#-nestjs-best-practices)
+* [GraphQL](#-graphql-best-practices)
+* [tRPC](#-trpc-best-practices)
 
-#### Functional & Specialized
-* [Elixir](#elixir-best-practices)
-* [Go](#go-golang-best-practices)
-* [Swift](#swift-best-practices)
-* [Objective-C](#objective-c-best-practices)
-* [Perl](#perl-best-practices)
-* [Lua](#lua-best-practices)
+**Modern Runtimes**
+* [Deno](#-deno-best-practices)
+* [Bun](#-bun-best-practices)
 
-### 🔹 Frontend Development
+**Functional & Specialized**
+* [Elixir](#-elixir-best-practices)
+* [Go](#-go-golang-best-practices)
+* [Swift](#-swift-best-practices)
+* [Objective-C](#-objective-c-best-practices)
+* [Perl](#-perl-best-practices)
+* [Lua](#-lua-best-practices)
 
-#### Core Technologies
-* [HTML](#html-best-practices)
-* [CSS](#css-best-practices)
-* [SASS](#sass-best-practices)
-* [JavaScript](#javascript-best-practices)
-* [TypeScript](#typescript-best-practices)
+**🔹 Frontend Development**
 
-#### Frameworks & Libraries
-* [React](#reactjs-best-practices)
-* [React Native](#react-native-best-practices)
-* [Vue](#vue-best-practices)
-* [Angular](#angular-best-practices)
-* [Next.js](#nextjs-best-practices)
-* [Nuxt](#nuxt-best-practices)
-* [Svelte](#svelte-best-practices)
-* [Solid.js](#solidjs-best-practices)
+**Core Technologies**
+* [HTML](#-html-best-practices)
+* [CSS](#-css-best-practices)
+* [SASS](#-sass-best-practices)
+* [JavaScript](#-javascript-best-practices)
+* [TypeScript](#-typescript-best-practices)
 
-#### Performance
-* [Frontend Performance](#frontend-performance-best-practices)
+**Frameworks & Libraries**
+* [React](#-reactjs-best-practices)
+* [Vue](#-vue-best-practices)
+* [Angular](#-angular-best-practices)
+* [Next.js](#-nextjs-best-practices)
+* [Nuxt](#-nuxt-best-practices)
+* [Svelte](#-svelte-best-practices)
+* [Solid.js](#-solidjs-best-practices)
 
-### 🔹 Backend Runtimes & Communication
+**Performance**
+* [Frontend Performance](#-frontend-performance-best-practices)
 
-#### Modern Runtimes
-* [Deno](#deno-best-practices)
-* [Bun](#bun-best-practices)
+**🔹 Database & Data**
+* [SQL](#-sql-best-practices)
+* [PostgreSQL](#-postgresql-best-practices)
+* [MySQL](#-mysql-best-practices)
 
-#### API Layer
-* [GraphQL](#graphql-best-practices)
-* [tRPC](#trpc-best-practices)
+**NoSQL & Big Data**
+* [NoSQL](#-nosql-best-practices)
 
-### 🔹 Database & Data
-* [SQL](#sql-best-practices)
-* [PostgreSQL](#postgresql-best-practices)
-* [MySQL](#mysql-best-practices)
+**ORMs**
+* [Prisma](#-prisma-best-practices)
+* [Drizzle ORM](#-drizzle-orm-best-practices)
 
-#### NoSQL & Big Data
-* [NoSQL](#nosql-best-practices)
+**🔹 Mobile Development**
+* [Flutter](#-flutter-best-practices)
+* [Dart](#-dart-best-practices)
+* [React Native](#-react-native-best-practices)
 
-#### ORMs
-* [Prisma](#prisma-best-practices)
-* [Drizzle ORM](#drizzle-orm-best-practices)
+**🔹 DevOps & Infrastructure**
 
-### 🔹 Mobile Development
-* [Flutter](#flutter-best-practices)
-* [Dart](#dart-best-practices)
-* [React Native](#react-native-best-practices)
+**Cloud & Deployment**
+* [AWS](#-aws-best-practices)
+* [Microservices & Cloud-Native](#-microservices--cloud-native-best-practices)
+* [Docker](#-docker-best-practices)
+* [Kubernetes](#-kubernetes-best-practices)
 
-### 🔹 DevOps & Infrastructure
+**Security**
+* [API Security](#-api-security-best-practices)
+* [DevSecOps](#-devsecops--security-best-practices)
 
-#### Cloud & Deployment
-* [AWS](#aws-best-practices)
-* [Microservices & Cloud-Native](#microservices--cloud-native-best-practices)
-* [Docker](#docker-best-practices)
-* [Kubernetes](#kubernetes-best-practices)
+**🔹 AI & Data Science**
+* [AI/ML Engineering](#-aiml-engineering-best-practices)
+* [AI Tools for Developers](#-ai-tools-for-developers)
 
-#### Security
-* [API Security](#api-security-best-practices)
-* [DevSecOps](#devsecops--security-best-practices)
+**🔹 Development Tools & Practices**
 
-### 🔹 AI & Data Science
-* [AI/ML Engineering](#aiml-engineering-best-practices)
-* [AI Tools for Developers](#ai-tools-for-developers)
+**Version Control & Collaboration**
+* [Code Review](#-code-review-best-practices)
+* [Git](#-git-best-practices)
+* [Team Collaboration](#-team--collaboration-best-practices)
 
-### 🔹 Development Tools & Practices
+**Scripting & Automation**
+* [Bash](#-bash-script-best-practices)
 
-#### Version Control & Collaboration
-* [Code Review](#code-review-best-practices)
-* [Git](#git-best-practices)
-* [Team Collaboration](#team--collaboration-best-practices)
-
-#### Scripting & Automation
-* [Bash](#bash-script-best-practices)
-
-#### Linting & Formatting
+**Linting & Formatting**
 * [Biome](#biome-best-practices)
 
-#### Monorepo
+**Monorepo**
 * [Turborepo](#turborepo-best-practices)
 * [Nx](#nx-best-practices)
 
-#### Testing
-* [General Testing](#general-testing-best-practices)
+**Testing**
+* [General Testing](#-general-testing-best-practices)
 
-#### Performance & Architecture
-* [System Design](#system-design-best-practices)
-* [Performance & Scalability](#performance--scalability-best-practices)
+**Performance & Architecture**
+* [System Design](#-system-design-best-practices)
+* [Performance & Scalability](#-performance--scalability-best-practices)
 
-### 🔹 Specialized Languages
-* [R](#r-best-practices)
+**🔹 Specialized Languages**
+* [R](#-r-best-practices)
 
 ---
 
@@ -1032,7 +970,7 @@ Here are some standout resources that every developer should know:
 
 ---
 
-### 🤖 AI Tools for Developers
+## 🤖 AI Tools for Developers
 
 * [Effective AI Pair Programming (GitHub Copilot)](https://github.com/features/copilot) — 🏢 *GitHub/Microsoft*
 * [Cursor AI Best Practices](https://docs.cursor.com/get-started/best-practices) — 🏢 *Cursor Official*
@@ -1086,25 +1024,25 @@ Here are some standout resources that every developer should know:
 * [Best Practices for Bash Scripts](https://hyperskill.org/learn/step/19230)
 * [Shell Style Guide (Google)](https://google.github.io/styleguide/shellguide.html) — 🏢 *Google Official*
 
-### 🧹 Linting & Formatting
+## 🧹 Linting & Formatting
 
-#### Biome Best Practices
+### Biome Best Practices
 
 * [Biome Getting Started](https://biomejs.dev/guides/getting-started/) — 🏢 *Biome Official*
 * [Biome Configuration Guide](https://biomejs.dev/reference/configuration/) — 🏢 *Biome Official*
 * [Biome Linter Rules](https://biomejs.dev/linter/) — 🏢 *Biome Official*
 * [Biome vs ESLint/Prettier Migration](https://biomejs.dev/guides/migrate-eslint-prettier/) — 🏢 *Biome Official*
 
-### 🏗️ Monorepo Best Practices
+## 🏗️ Monorepo Best Practices
 
-#### Turborepo Best Practices
+### Turborepo Best Practices
 
 * [Turborepo Getting Started](https://turbo.build/repo/docs) — 🏢 *Vercel Official*
 * [Turborepo Configuration Guide](https://turbo.build/repo/docs/reference/configuration) — 🏢 *Vercel Official*
 * [Turborepo Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) — 🏢 *Vercel Official*
 * [Migrating to Turborepo](https://turborepo.com/docs/guides/migrating-from-nx) — 🏢 *Vercel Official*
 
-#### Nx Best Practices
+### Nx Best Practices
 
 * [Nx Getting Started](https://nx.dev/getting-started/intro) — 🏢 *Nx Official*
 * [Nx Best Practices Guide](https://nx.dev/recipes/enforce-module-boundaries) — 🏢 *Nx Official*
@@ -1231,6 +1169,125 @@ Looking for more? Check out these complementary resources:
 
 ---
 
+# 🚀 Quick Start Setup
+
+> Just browsing the guides? No setup needed — every link above works straight from GitHub. Follow these steps only for **offline access, local search, or AI-editor integration**.
+
+## ✅ Prerequisites
+
+- **Git** (any recent version)
+- **Python 3.8+** with `pip` and `venv` (only needed for crawling, offline search, or installing the AI skill)
+- Works on macOS, Linux, and Windows (use `.venv\Scripts\activate` on Windows)
+
+## 🎯 Automated Setup (Recommended)
+
+The fastest way to get started is using our automated setup script:
+
+```bash
+# Clone the repository
+git clone https://github.com/dereknguyen269/programing-best-practices.git
+cd programing-best-practices
+
+# Run the interactive setup script
+./scripts/quick-start.sh
+```
+
+The script will guide you through different setup options:
+
+| Mode | Time | What's Included |
+|------|------|-----------------|
+| **Minimal** | ~1 min | Dependencies only, no crawling |
+| **Test** | ~2-3 min | Dependencies + 20 sample resources |
+| **Full** | ~10-15 min | Everything + all 340+ resources + AI summaries |
+| **Custom** | Varies | Choose specific categories to crawl |
+
+**Quick Options:**
+
+```bash
+# Minimal setup (just dependencies)
+./scripts/quick-start.sh --minimal
+
+# Full setup (everything)
+./scripts/quick-start.sh --full
+
+# Test with 20 resources
+./scripts/quick-start.sh --limit 20
+
+# Crawl only Python resources
+./scripts/quick-start.sh --category python
+```
+
+## 📋 Manual Setup (Alternative)
+
+Prefer to set up manually? Follow these steps:
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/dereknguyen269/programing-best-practices.git
+cd programing-best-practices
+```
+
+### Step 2: Install Crawler Dependencies (Optional but Recommended)
+
+The crawler downloads all external resources locally for offline access:
+
+```bash
+# Create virtual environment (recommended)
+python3 -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# Install dependencies
+pip install -r scripts/crawler/requirements.txt
+```
+
+### Step 3: Crawl Resources (Optional)
+
+Download all best practices content locally:
+
+> **Note**: Make sure your virtual environment is activated before running these commands:
+> ```bash
+> source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+> ```
+>
+> Or use the venv Python directly: `.venv/bin/python3` instead of `python3`
+
+```bash
+# Crawl all resources (~340+ links, takes 10-15 minutes)
+python3 scripts/crawler/crawl.py
+
+# Or crawl specific categories
+python3 scripts/crawler/crawl.py --category python
+python3 scripts/crawler/crawl.py --category javascript
+
+# Or crawl a limited number for testing
+python3 scripts/crawler/crawl.py --limit 20
+
+# Update existing content
+python3 scripts/crawler/crawl.py --update
+```
+
+### Step 4: Generate AI Summaries (Optional)
+
+Create condensed summaries optimized for AI assistants:
+
+```bash
+python3 scripts/crawler/generate_summaries.py
+```
+
+### Step 5: Use with Your AI Coding Editor
+
+The repository is now ready! Your AI coding editor will automatically detect:
+
+| AI Editor | Config File | Auto-Detected |
+|-----------|-------------|---------------|
+| **Claude Code** | `skills/best-practices/` | ✅ |
+| **Kiro** | `.kiro/steering/best-practices/` | ✅ |
+
+See [Searching the Knowledge Base](#-searching-the-knowledge-base) and [Troubleshooting](#️-troubleshooting) if you get stuck.
+
+---
+
 # 🤝 Contributing
 
 Contributions are always welcome! 🎉
@@ -1238,7 +1295,7 @@ Before contributing, please read the [Contribution Guidelines](contributing.md).
 
 ---
 
-# � Support This Project
+# 💖 Support This Project
 
 If you find this repository helpful, here are some ways you can show your support:
 
@@ -1277,25 +1334,28 @@ Check out our [Featured Resources](#-featured-resources) section for must-read g
 Definitely! Many teams use this repository as a reference for establishing coding standards. Feel free to share relevant sections with your team or use them in onboarding materials.
 
 ### Is this repository language-specific?
-No, we cover 30+ programming languages and frameworks. Use the [Table of Contents](#-table-of-contents) or [Quick Links](#-quick-links) to navigate to your preferred technology.
+No, we cover 30+ programming languages and frameworks. Use the [Table of Contents](#-table-of-contents) or [Quick Links](#quick-links) to navigate to your preferred technology.
 
 ### How can I stay updated with new additions?
 - ⭐ Star and Watch this repository on GitHub
 - Check the [What's New](#-whats-new) section periodically
 - Follow the repository for notifications
 
+### I found a broken link — what should I do?
+Please [open an issue](https://github.com/dereknguyen269/programing-best-practices/issues) with the broken URL. Links are also validated automatically every week (see [Maintenance & Link Health](#-maintenance--link-health)), so it may already be queued for a fix.
+
 ---
 
 # 📜 License
 
-[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
-This project is licensed under **Creative Commons Zero v1.0 Universal (CC0 1.0)** — *Public Domain Dedication*.
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+This project is released into the **public domain** under **[The Unlicense](http://unlicense.org/)** — see the [LICENSE](LICENSE) file for details.
 
 ---
 
 <div align="center">
     <p><strong>Made with ❤️ by developers, for developers</strong></p>
     <p>
-        <a href="#-programming-best-practices">⬆ Back to Top</a>
+        <a href="#top">⬆ Back to Top</a>
     </p>
 </div>
