@@ -339,5 +339,5 @@ This script is part of the Programming Best Practices repository and is licensed
 ## Support
 
 - **Issues**: [GitHub Issues](https://github.com/dereknguyen269/programing-best-practices/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/dereknguyen269/programing-best-practices/discussions)
+- **Feature Requests**: [Open an issue](https://github.com/dereknguyen269/programing-best-practices/issues/new)
 - **Documentation**: [Main README](../README.md)

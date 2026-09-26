@@ -1,5 +1,6 @@
 import re
 import glob
+import os
 import urllib.request
 import urllib.error
 import concurrent.futures
@@ -7,8 +8,10 @@ import socket
 
 socket.setdefaulttimeout(4)
 
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 links = set()
-for md in glob.glob("/home/ubuntu/repo/**/*.md", recursive=True):
+for md in glob.glob(os.path.join(REPO_ROOT, "**", "*.md"), recursive=True):
     with open(md, "r", encoding="utf-8", errors="ignore") as f:
         content = f.read()
         found = re.findall(r"\[([^\]]+)\]\((https?://[^\)]+)\)", content)
