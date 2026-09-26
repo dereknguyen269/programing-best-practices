@@ -1,0 +1,22 @@
+{
+  "_comment": "Settings for scripts/validate_links.py. blocked_hosts lists hosts that answer automated clients with 403/429 even though the page loads fine in a browser; links on these hosts are reported as 'blocked' instead of 'broken'.",
+  "timeout_seconds": 8,
+  "retries": 2,
+  "workers": 24,
+  "blocked_hosts": [
+    "about.gitlab.com",
+    "dev.mysql.com",
+    "genai.owasp.org",
+    "kodeco.com",
+    "linkedin.com",
+    "medium.com",
+    "netflixtechblog.com",
+    "oreilly.com",
+    "reddit.com",
+    "stat.ethz.ch",
+    "twitter.com",
+    "w3.org",
+    "x.com"
+  ],
+  "ignored_urls": []
+}
