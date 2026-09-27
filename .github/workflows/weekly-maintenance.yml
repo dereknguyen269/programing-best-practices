@@ -1,0 +1,143 @@
+name: Weekly Maintenance
+
+# Replaces the old scripts/auto_maintenance_pr.sh, which ran on a single
+# developer machine with hardcoded paths and opened a PR every week even when
+# nothing had changed (the last four runs only appended a timestamp line).
+#
+# Behaviour:
+#   - applies scripts/fix_links.py to rewrite dead URLs
+#   - opens or updates ONE pull request, on a stable branch, only when a file
+#     other than maintenance_log.txt actually changed
+#   - prunes merged chore/weekly-maintenance-* branches left behind by the
+#     previous pipeline
+
+on:
+  schedule:
+    # Mondays 04:00 UTC.
+    - cron: "0 4 * * 1"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Report what would change without opening a PR"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: weekly-maintenance
+  cancel-in-progress: false
+
+jobs:
+  maintain:
+    name: Apply link fixes and open PR
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          # Full history so the diff below and the merged-branch check work.
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Prune merged maintenance branches
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true
+        run: |
+          # The previous pipeline left one branch per week behind. Delete only
+          # branches this automation owns that are already merged into master.
+          git fetch --prune origin '+refs/heads/*:refs/remotes/origin/*'
+          for branch in $(git ls-remote --heads origin 'chore/weekly-maintenance-*' \
+                            | awk '{print $2}' | sed 's#refs/heads/##'); do
+            if git merge-base --is-ancestor "origin/$branch" origin/master 2>/dev/null; then
+              echo "Deleting merged branch $branch"
+              git push origin --delete "$branch"
+            fi
+          done
+
+      - name: Apply link fixes
+        run: python3 scripts/fix_links.py
+
+      - name: Record this maintenance run
+        run: date -u +"%Y-%m-%d %H:%M:%S UTC" >> maintenance_log.txt
+
+      - name: Detect real changes
+        id: changes
+        run: |
+          # A timestamp-only diff is not worth a pull request.
+          if git diff --quiet -- . ':(exclude)maintenance_log.txt'; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No link changes detected; nothing to propose."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "Link changes detected:"
+            git diff --stat -- . ':(exclude)maintenance_log.txt'
+          fi
+
+      - name: Validate links after fixes
+        if: steps.changes.outputs.changed == 'true'
+        continue-on-error: true
+        run: python3 scripts/validate_links.py --json link-results.json
+
+      - name: Summarise link status
+        id: summary
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          if [ -f link-results.json ]; then
+            python3 -c "import json;c=json.load(open('link-results.json'))['counts'];print('line=ok %d / blocked %d / broken %d of %d' % (c['ok'],c['blocked'],c['broken'],c['total']))" >> "$GITHUB_OUTPUT"
+          else
+            echo "line=validation did not complete" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open or update pull request
+        if: steps.changes.outputs.changed == 'true' && inputs.dry_run != true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          BRANCH="chore/weekly-maintenance"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git checkout -B "$BRANCH"
+          git add -A
+          git commit -m "chore: weekly automated link maintenance"
+
+          # Force-push is safe: this branch is owned solely by this workflow.
+          git push -f origin "$BRANCH"
+
+          # Build a body describing exactly which URLs changed.
+          {
+            echo "Automated weekly link maintenance."
+            echo
+            echo "**Link status after fixes:** ${{ steps.summary.outputs.line }}"
+            echo
+            echo '```diff'
+            git diff HEAD~1 -- . ':(exclude)maintenance_log.txt' | grep -E '^[+-]' | head -100 \
+              || echo "No line-level diff captured."
+            echo '```'
+            echo
+            echo "A separate link-check run gates this PR; bot-blocked hosts are listed in \`scripts/link_check_config.json\`."
+            echo
+            echo "---"
+            echo
+            echo "*This pull request was created by an AI agent (OpenHands) on behalf of the repository owner.*"
+          } > /tmp/pr-body.md
+
+          if gh pr list --head "$BRANCH" --state open --json number -q '.[].number' | grep -q .; then
+            echo "Existing PR for $BRANCH updated by push."
+          else
+            gh pr create \
+              --base master \
+              --head "$BRANCH" \
+              --title "🧹 Weekly link maintenance ($(date -u +%Y-%m-%d))" \
+              --body-file /tmp/pr-body.md
+          fi

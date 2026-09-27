@@ -1,0 +1,25 @@
+{
+  "_comment": "Settings for scripts/validate_links.py. Hosts that answer automated clients with 403/429 while serving the page fine to a browser belong in blocked_hosts. validate_links.py also cross-checks every failure against the Wayback Machine, so a host does not need listing here merely because GitHub's runners are refused -- list it to silence a known bot-blocker without a Wayback lookup.",
+  "timeout_seconds": 8,
+  "retries": 2,
+  "workers": 24,
+  "per_host_workers": 2,
+  "wayback_max_age_days": 730,
+  "blocked_hosts": [
+    "about.gitlab.com",
+    "dev.mysql.com",
+    "genai.owasp.org",
+    "kodeco.com",
+    "linkedin.com",
+    "medium.com",
+    "netflixtechblog.com",
+    "oreilly.com",
+    "reddit.com",
+    "stat.ethz.ch",
+    "toptal.com",
+    "twitter.com",
+    "w3.org",
+    "x.com"
+  ],
+  "ignored_urls": []
+}

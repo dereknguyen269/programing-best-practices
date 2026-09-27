@@ -2,6 +2,10 @@
 /content/
 /summaries/
 
+# Link check output (written by scripts/validate_links.py; uploaded as CI artifacts)
+/link-results.json
+/failed_urls_report.md
+
 # Python
 __pycache__/
 *.py[cod]
